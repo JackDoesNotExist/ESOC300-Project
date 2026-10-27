@@ -32,7 +32,7 @@ html {
   overflow: hidden;
 }
 
-.mainButton: active {
+.mainButton:active {
   scale: 0.97;
 }
 
