@@ -32,6 +32,10 @@ html {
   overflow: hidden;
 }
 
+.mainButton: active {
+  scale: 0.97;
+}
+
 .hammer {
   width: 15.625rem;
   height: 15.625rem;
