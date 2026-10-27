@@ -17,6 +17,7 @@ body {
   
   border: 4px solid;
   border-radius: 12.5rem;
+  cursor: pointer;
   overflow: hidden;
 }
 
