@@ -19,6 +19,11 @@ body {
   border-radius: 12.5rem;
 }
 
+.hammer {
+  width: 15.625;
+  height: 15.625;
+}
+
 .pageButtons {
   width: 7rem;
   height: 3rem;
