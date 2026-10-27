@@ -7,6 +7,10 @@ body {
   background-color: CornflowerBlue;
 }
 
+.UI {
+  font-size: 2rem;
+}
+
 .pageButtons {
   width: 7rem;
   height: 3rem;
