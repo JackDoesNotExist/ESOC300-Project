@@ -6,7 +6,7 @@
   <body>
     <script>
       // 1. Create a reference to the button
-      const button = document.getElementById('mainButtonId');
+      const button = document.getElementById("mainButtonId");
   
       // 2. Initialize the audio object with your file path
       const audio = new Audio('./hammer_hit.wav');
@@ -18,28 +18,28 @@
         audio.play();
       });
     </script>
+
+    <div class="UI">
+      <h4>
+        Money: <span id="money">0</span>
+      </h4>
+      <h6>
+        Citizens: <span id="citizens">0</span> &nbsp; | &nbsp;
+        Woodcutter: <span id="woodcutter">0</span> &nbsp; | &nbsp;
+        Miner: <span id="miner">0</span>
+      </h6>
+    </div>
+  
+    <div class="mainButtonSec">
+      <button class="mainButton" id="mainButtonId">
+        <img src="./hammer.png" class="hammer">
+      </button>
+    </div>
+  
+    <div>
+      <a href="./index.html">
+        <button class="pageButtons" id="backButton">Back</button>
+      </a>
+    </div>
   </body>
-
-  <div class="UI">
-    <h4>
-      Money: <span id="money">0</span>
-    </h4>
-    <h6>
-      Citizens: <span id="citizens">0</span> &nbsp; | &nbsp;
-      Woodcutter: <span id="woodcutter">0</span> &nbsp; | &nbsp;
-      Miner: <span id="miner">0</span>
-    </h6>
-  </div>
-
-  <div class="mainButtonSec">
-    <button class="mainButton" id="mainButtonId>
-      <img src="./hammer.png" class="hammer">
-    </button>
-  </div>
-
-  <div>
-    <a href="./index.html">
-      <button class="pageButtons" id="backButton">Back</button>
-    </a>
-  </div>
 </html>
