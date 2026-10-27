@@ -1,10 +1,12 @@
-html {
-  font-size: 100%;
-  color: Navy;
+:root {
+  --primary-color: #392613;
+  --main-bg: #996633;
 }
 
-body {
-  background-color: CornflowerBlue;
+html {
+  font-size: 100%;
+  color: var(--primary-color);
+  background-color: var(--main-bg);
 }
 
 .UI {
@@ -15,7 +17,7 @@ body {
   width: 18.75rem;
   height: 18.75rem;
   
-  border: 4px solid;
+  border: 4px solid var(--primary-color);
   border-radius: 12.5rem;
   cursor: pointer;
   overflow: hidden;
@@ -29,12 +31,12 @@ body {
 .pageButtons {
   width: 7rem;
   height: 3rem;
-  border: 4px solid Navy;
+  border: 4px solid var(--primary-color);
   border-radius: 8px;
 
   font-size: 1.5rem;
-  background-color: #5b87d7;
-  color: Navy;
+  background-color: var(--main-bg);
+  color: var(--primary-color);
 
   position: fixed;
   bottom: 10px;
