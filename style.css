@@ -1,9 +1,14 @@
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: CornflowerBlue;
   color: Navy;
 }
 
 .pageButtons {
+  width: 2rem;
   border: 4px solid Navy;
   border-radius: 8px;
 }
