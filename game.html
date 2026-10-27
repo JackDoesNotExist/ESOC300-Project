@@ -3,6 +3,23 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
+  <body>
+    <script>
+      // 1. Create a reference to the button
+      const button = document.getElementById('mainButtonId');
+  
+      // 2. Initialize the audio object with your file path
+      const audio = new Audio('./hammer_hit.wav');
+      
+      // 3. Add a click event listener to play the sound
+      button.addEventListener('click', () => {
+        // Reset the audio back to the beginning in case it's clicked rapidly
+        audio.currentTime = 0; 
+        audio.play();
+      });
+    </script>
+  </body>
+
   <div class="UI">
     <h4>
       Money: <span id="money">0</span>
@@ -15,7 +32,7 @@
   </div>
 
   <div class="mainButtonSec">
-    <button class="mainButton">
+    <button class="mainButton" id="mainButtonId>
       <img src="./hammer.png" class="hammer">
     </button>
   </div>
