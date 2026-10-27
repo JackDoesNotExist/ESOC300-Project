@@ -19,6 +19,8 @@ html {
   
   border: 4px solid var(--primary-color);
   border-radius: 12.5rem;
+
+  align-items: center;
   cursor: pointer;
   overflow: hidden;
 }
@@ -26,6 +28,8 @@ html {
 .hammer {
   width: 15.625rem;
   height: 15.625rem;
+  object-fit: contain;
+  scale: 1.1;
 }
 
 .pageButtons {
