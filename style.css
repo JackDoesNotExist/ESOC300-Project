@@ -13,6 +13,13 @@ html {
   font-size: 2rem;
 }
 
+.mainButtonSec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
 .mainButton {
   width: 18.75rem;
   height: 18.75rem;
