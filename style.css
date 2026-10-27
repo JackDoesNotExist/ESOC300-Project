@@ -2,3 +2,9 @@ body {
   background-color: CornflowerBlue;
   color: Navy;
 }
+
+.pageButtons {
+  border: 4px;
+  border-radius: 8px;
+  border-color: Navy;
+}
