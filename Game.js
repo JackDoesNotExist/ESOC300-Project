@@ -47,7 +47,7 @@ class Game {
     updateLoop() {
         // Passive income divided across 30 ticks per second
         const ticksPerSecond = 30;
-        this.player.addCurrency("money", this.player.passiveIncome / ticksPerSecond);
+        this.player.addCurrency("money", (this.player.passiveIncome / ticksPerSecond));
         this.ui.updateDisplay(this.player);
     }
 }
