@@ -1,0 +1,46 @@
+export class Player {
+    Player() {
+        this.money = 0;
+        this.wood = 0;
+        this.stone = 0;
+        this.totalClicks = 0;
+        this.clickPower = 1;
+        this.passiveIncome = 0;
+    }
+
+    addMoney(amount) {
+        this.money += amount;
+    }
+
+    addWood(amount) {
+        this.wood += amount;
+    }
+
+    addStone(amount) {
+        this.stone += amount;
+    }
+
+    spendMoney(amount) {
+        if (this.money >= amount) {
+            this.money -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    spendWood(amount) {
+        if (this.wood >= amount) {
+            this.wood -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    spendStone(amount) {
+        if (this.stone >= amount) {
+            this.stone -= amount;
+            return true;
+        }
+        return false;
+    }
+}
