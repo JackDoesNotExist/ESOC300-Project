@@ -65,3 +65,7 @@ html {
   bottom: 10px;
   right: 10px;
 }
+
+#resetButton.pageButtons {
+  bottom: 10px;
+}
