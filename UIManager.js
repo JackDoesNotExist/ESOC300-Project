@@ -9,9 +9,9 @@ export class UIManager {
     }
 
     updateDisplay(player) {
-        this.moneyText.innerText = Math.floor(player.currency).toLocaleString();
-        this.woodText.innerText = Math.floor(player.currency).toLocaleString();
-        this.stoneText.innerText = Math.floor(player.currency).toLocaleString();
+        this.moneyText.innerText = Math.floor(player.money).toLocaleString();
+        this.woodText.innerText = Math.floor(player.wood).toLocaleString();
+        this.stoneText.innerText = Math.floor(player.stone).toLocaleString();
         this.cpsText.innerText = player.passiveIncome.toFixed(1);
     }
 
