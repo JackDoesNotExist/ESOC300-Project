@@ -1,5 +1,5 @@
 export class UIManager {
-    UIManager() {
+    constructor() {
         this.moneyText = document.getElementById('money-display');
         this.woodText = document.getElementById('wood-display');
         this.stoneText = document.getElementById('stone-display');
