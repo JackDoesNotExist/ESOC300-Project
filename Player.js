@@ -8,6 +8,16 @@ export class Player {
         this.passiveIncome = 0;
     }
 
+    addCurrency(currency, amount) {
+        if (currency === "money") {
+            addMoney(amount);
+        } else if (currency === "wood") {
+            addWood(amount);
+        } else if (currency === "stone") {
+            addStone(amount);
+        }
+    }
+
     addMoney(amount) {
         this.money += amount;
     }
