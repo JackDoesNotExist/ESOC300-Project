@@ -1,6 +1,8 @@
 export class UIManager {
     UIManager() {
-        this.currencyText = document.getElementById('currency-display');
+        this.moneyText = document.getElementById('money-display');
+        this.woodText = document.getElementById('wood-display');
+        this.stoneText = document.getElementById('stone-display');
         this.cpsText = document.getElementById('cps-display');
         this.clickButton = document.getElementById('main-clicker');
         this.shopContainer = document.getElementById('shop-container');
