@@ -50,6 +50,10 @@ class Game {
         this.player.addCurrency("money", (this.player.passiveIncome / ticksPerSecond));
         this.ui.updateDisplay(this.player);
     }
+
+    resetSave() {
+        SaveSystem.clearSave();
+    }
 }
 
 // Fire up the game engine!
