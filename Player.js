@@ -10,11 +10,11 @@ export class Player {
 
     addCurrency(currency, amount) {
         if (currency === "money") {
-            addMoney(amount);
+            this.addMoney(amount);
         } else if (currency === "wood") {
-            addWood(amount);
+            this.addWood(amount);
         } else if (currency === "stone") {
-            addStone(amount);
+            this.addStone(amount);
         }
     }
 
