@@ -20,6 +20,16 @@ export class Player {
         this.stone += amount;
     }
 
+    spendCurrency(currency, amount) {
+        if (currency === "money") {
+            spendMoney(amount);
+        } else if (currency === "wood") {
+            spendWood(amount);
+        } else if (currency === "stone") {
+            spendStone(amount);
+        }
+    }
+
     spendMoney(amount) {
         if (this.money >= amount) {
             this.money -= amount;
