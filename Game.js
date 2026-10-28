@@ -52,7 +52,7 @@ class Game {
     }
 
     resetSave() {
-        SaveSystem.clearSave();
+        SaveSystem.clearSave(this.player, this.upgrades);
     }
 }
 
