@@ -32,11 +32,11 @@ export class Player {
 
     spendCurrency(currency, amount) {
         if (currency === "money") {
-            spendMoney(amount);
+            this.spendMoney(amount);
         } else if (currency === "wood") {
-            spendWood(amount);
+            this.spendWood(amount);
         } else if (currency === "stone") {
-            spendStone(amount);
+            this.spendStone(amount);
         }
     }
 
