@@ -20,4 +20,16 @@ export class SaveSystem {
         });
         return true;
     }
+
+    static clearSave(player, upgrades) {
+        localStorage.removeItem('myClickerSave');
+
+        player.reset();
+
+        upgrades.forEach(upgrade => {
+            upgrade.level = 0;
+        });
+
+        return true;
+    }
 }
