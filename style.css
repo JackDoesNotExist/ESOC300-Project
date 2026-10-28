@@ -43,6 +43,11 @@ html {
   scale: 1.1;
 }
 
+.pageButtonsSec {
+  display: flex;
+  align-items: center;
+}
+
 .pageButtons {
   width: 7rem;
   height: 3rem;
