@@ -24,6 +24,11 @@ class Game {
             this.ui.updateDisplay(this.player);
         });
 
+        // Set up the reset button
+        document.getElementById('resetButton').addEventListener('click', () => {
+            this.resetSave();
+        });
+
         // Try loading a save file
         SaveSystem.load(this.player, this.upgrades);
 
