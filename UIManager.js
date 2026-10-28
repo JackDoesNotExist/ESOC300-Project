@@ -6,6 +6,9 @@ export class UIManager {
         this.cpsText = document.getElementById('cps-display');
         this.clickButton = document.getElementById('main-button');
         this.shopContainer = document.getElementById('shop-container');
+
+        this.shopContainer.style.position = "fixed";
+        this.shopContainer.style.bottom = "80px";
     }
 
     updateDisplay(player) {
