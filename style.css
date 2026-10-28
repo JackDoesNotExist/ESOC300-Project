@@ -45,6 +45,7 @@ html {
 
 .pageButtonsSec {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
