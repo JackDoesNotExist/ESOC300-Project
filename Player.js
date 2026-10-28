@@ -1,5 +1,5 @@
 export class Player {
-    Player() {
+    constructor() {
         this.money = 0;
         this.wood = 0;
         this.stone = 0;
