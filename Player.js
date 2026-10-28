@@ -1,11 +1,6 @@
 export class Player {
     constructor() {
-        this.money = 0;
-        this.wood = 0;
-        this.stone = 0;
-        this.totalClicks = 0;
-        this.clickPower = 1;
-        this.passiveIncome = 0;
+        this.reset();
     }
 
     addCurrency(currency, amount) {
@@ -62,5 +57,14 @@ export class Player {
             return true;
         }
         return false;
+    }
+
+    reset() {
+        this.money = 0;
+        this.wood = 0;
+        this.stone = 0;
+        this.totalClicks = 0;
+        this.clickPower = 1;
+        this.passiveIncome = 0;
     }
 }
