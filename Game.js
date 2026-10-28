@@ -19,7 +19,7 @@ class Game {
     init() {
         // Set up the big button click event
         this.ui.clickButton.addEventListener('click', () => {
-            this.player.addCurrency(this.player.clickPower);
+            this.player.addCurrency("money", this.player.clickPower);
             this.player.totalClicks++;
             this.ui.updateDisplay(this.player);
         });
@@ -47,7 +47,7 @@ class Game {
     updateLoop() {
         // Passive income divided across 30 ticks per second
         const ticksPerSecond = 30;
-        this.player.addCurrency(this.player.passiveIncome / ticksPerSecond);
+        this.player.addCurrency("money", this.player.passiveIncome / ticksPerSecond);
         this.ui.updateDisplay(this.player);
     }
 }
