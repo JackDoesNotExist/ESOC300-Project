@@ -3,6 +3,11 @@ export class UIManager {
         this.moneyText = document.getElementById('money-display');
         this.woodText = document.getElementById('wood-display');
         this.stoneText = document.getElementById('stone-display');
+        
+        this.citizenText = document.getElementById('citizen-display');
+        this.woodcutterText = document.getElementById('woodcutter-display');
+        this.minerText = document.getElementById('miner-display');
+        
         this.cpsText = document.getElementById('cps-display');
         this.clickButton = document.getElementById('main-button');
         this.shopContainer = document.getElementById('shop-container');
