@@ -1,9 +1,9 @@
 export class Upgrade {
-    constructor(id, name, baseCost, costMultiplier, incomeGenerated, type = 'passive', currency) {
+    constructor(id, name, baseCost, costMult, incomeGenerated, type = 'passive', currency) {
         this.id = id;
         this.name = name;
         this.baseCost = baseCost;
-        this.costMultiplier = costMultiplier; // e.g., 1.15
+        this.costMult = costMult; // e.g., 1.15
         this.incomeGenerated = incomeGenerated; // Gained per level
         this.type = type; // 'click' or 'passive'
         this.currency = currency;
@@ -11,7 +11,7 @@ export class Upgrade {
     }
 
     get currentCost() {
-        return Math.floor(this.baseCost * Math.pow(this.costMultiplier, this.level));
+        return Math.floor(this.baseCost * Math.pow(this.costMult, this.level));
     }
 
     purchase(player) {
