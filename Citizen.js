@@ -5,4 +5,8 @@ class Citizen {
     this.baseCost = baseCost;
     this.costMult = costMult;
   }
+
+  purchase(player) {
+    const
+  }
 }
