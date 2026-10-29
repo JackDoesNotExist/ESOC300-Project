@@ -63,6 +63,9 @@ export class Player {
         this.money = 0;
         this.wood = 0;
         this.stone = 0;
+        this.citizens = 0;
+        this.woodcutters = 0;
+        this.miners = 0;
         this.totalClicks = 0;
         this.clickPower = 1;
         this.passiveIncome = 0;
