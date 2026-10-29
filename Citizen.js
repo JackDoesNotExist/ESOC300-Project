@@ -6,7 +6,11 @@ class Citizen {
     this.costMult = costMult;
   }
 
+  get currentCost() {
+    return Math.floor(this.baseCost * Math.pow(this.costMult, this.level));
+  }
+
   purchase(player) {
-    const
+    const cost = this.currenctCost;
   }
 }
