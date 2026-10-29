@@ -1,5 +1,6 @@
 class Citizen {
-  constructor() {
-
+  constructor(job, currency) {
+    this.job = job;
+    this.currency = currency;
   }
 }
