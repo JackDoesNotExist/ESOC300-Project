@@ -20,6 +20,9 @@ export class UIManager {
         this.moneyText.innerText = Math.floor(player.money).toLocaleString();
         this.woodText.innerText = Math.floor(player.wood).toLocaleString();
         this.stoneText.innerText = Math.floor(player.stone).toLocaleString();
+        this.citizenText.innerText = Math.floor(player.citizens).toLocaleString();
+        this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
+        this.minerText.innerText = Math.floor(player.miners).toLocaleString();
         this.cpsText.innerText = player.passiveIncome.toFixed(1);
     }
 
