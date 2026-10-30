@@ -28,12 +28,38 @@ export class UIManager {
 
     renderShop(upgrades, onPurchaseCallback) {
         this.shopContainer.innerHTML = ''; // Clear prior shop UI
+        
         upgrades.forEach(upgrade => {
             const btn = document.createElement('button');
+            
             btn.className = 'shop-btn';
-            btn.innerHTML = `${upgrade.name} (Lvl ${upgrade.level}) <br> Cost: ${upgrade.currentCost}`;
+            btn.innerHTML = `
+                ${upgrade.name} (Lvl ${upgrade.level})
+                <br> 
+                Cost: ${upgrade.currentCost}
+            `;
+            
             btn.onclick = () => onPurchaseCallback(upgrade);
+            
             this.shopContainer.appendChild(btn);
         });
+    }
+
+    renderCitizenShop(citizens, onPurchaseCallback) {
+        this.citizenContainer.innerHTML = '';
+
+        citizen.forEach(citizen => {
+            const btn = document.createElement('button');
+
+            btn.className = 'shop-btn';
+            btn.innerHTML = `
+                ${citizen.job} (Owned: ${citizen.count})
+                <br>
+                Cost: ${citizen.currentCost}
+            `;
+
+            btn.onclick = () => onPurchaseCallback(citizen);
+
+            this.citizenContainer.appendChild(btn);
     }
 }
