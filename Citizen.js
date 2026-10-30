@@ -19,7 +19,7 @@ class Citizen {
   purchase(player) {
     const cost = this.currenctCost;
     if (player.spendCurrency(currency, cost)) {
-      this.count += 1;
+      this.count++;
       return true;
     }
     return false;
