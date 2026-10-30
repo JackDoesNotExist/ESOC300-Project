@@ -29,11 +29,11 @@ export class Player {
     // Determines currency types and calls related spend function
     spendCurrency(currency, amount) {
         if (currency === "money") {
-            this.spendMoney(amount);
+            return this.spendMoney(amount);
         } else if (currency === "wood") {
-            this.spendWood(amount);
+            return this.spendWood(amount);
         } else if (currency === "stone") {
-            this.spendStone(amount);
+            return this.spendStone(amount);
         }
     }
 
