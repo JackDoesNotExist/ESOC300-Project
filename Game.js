@@ -2,6 +2,7 @@ import { Player } from './Player.js';
 import { Upgrade } from './Upgrade.js';
 import { UIManager } from './UIManager.js';
 import { SaveSystem } from './SaveSystem.js';
+import { Citizen } from './Citizen.js';
 
 class Game {
     constructor() {
