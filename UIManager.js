@@ -52,7 +52,7 @@ export class UIManager {
     renderCitizenShop(citizens, onPurchaseCallback) {
         this.citizenContainer.innerHTML = '';
 
-        citizen.forEach(citizen => {
+        citizens.forEach(citizen => {
             const btn = document.createElement('button');
 
             btn.className = 'shop-btn';
@@ -65,6 +65,6 @@ export class UIManager {
             btn.onclick = () => onPurchaseCallback(citizen);
 
             this.citizenContainer.appendChild(btn);
-        }
+        });
     }
 }
