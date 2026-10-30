@@ -38,7 +38,7 @@ export class SaveSystem {
 
         citizens.forEach(citizen => {
             citizen.count = 0;
-            citizen.level = 0;
+            citizen.level = 1;
         });
 
         return true;
