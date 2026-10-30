@@ -44,17 +44,15 @@ html {
 }
 
 #citizenContainer.purchaseContainer {
-  position: relative;
   bottom: 60px;
 }
 
 #shopContainer.purchaseContainer {
-  position: relative;
   bottom: 80px;
 }
 
 .purchaseContainer {
-  position: fixed;
+  position: relative;
 }
 
 .shop-btn {
