@@ -76,7 +76,6 @@ class Game {
 
     resetSave() {
         SaveSystem.clearSave(this.player, this.upgrades, this.citizens);
-        init();
     }
 }
 
