@@ -21,7 +21,6 @@ export class UIManager {
     }
 
     updateDisplay(player) {
-        console.log("Updating display:", player.citizens, player.woodcutters, player.miners);
         this.moneyText.innerText = Math.floor(player.money).toLocaleString();
         this.woodText.innerText = Math.floor(player.wood).toLocaleString();
         this.stoneText.innerText = Math.floor(player.stone).toLocaleString();
