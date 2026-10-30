@@ -67,6 +67,7 @@ export class Player {
         } else if (job === "Miner") {
             this.miner += 1;
         }
+        this.citizens += 1;
     }
     
     reset() {
