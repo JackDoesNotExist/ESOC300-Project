@@ -38,15 +38,9 @@ class Game {
         SaveSystem.load(this.player, this.upgrades);
 
         // First UI Render
-        this.ui.renderShop(
-            this.upgrades,
-            (upgrade) => this.handlePurchase(upgrade)
-        );
+        this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
 
-        this.ui.renderCitizenShop(
-            this.citizens,
-            (citizen) => this.handleCitizenPurchase(citizen)
-        );
+        this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
 
         // Start 30 FPS core update loop for passive income
         setInterval(() => this.updateLoop(), 1000 / 30);
