@@ -19,7 +19,7 @@ export class Citizen {
   purchase(player) {
     const cost = this.currentCost;
     if (player.spendCurrency(this.currency, cost)) {
-      player.addCitizen(job);
+      player.addCitizen(this.job);
       this.count++;
       return true;
     }
