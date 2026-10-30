@@ -15,12 +15,12 @@ export class SaveSystem {
         const parsed = JSON.parse(data);
         Object.assign(player, parsed.player);
         
-        parsed.upgrades.forEach(savedUpgrade => {
+        (parsed.upgrades || []).forEach(savedUpgrade => {
             const actualUpgrade = upgrades.find(u => u.id === savedUpgrade.id);
             if (actualUpgrade) actualUpgrade.level = savedUpgrade.level;
         });
 
-        parsed.citizens.forEach(savedCitizen => {
+        (parsed.citizens || []).forEach(savedCitizen => {
             const actualCitizen = citizens.find(c => c.job === savedCitizen.job);
             if (actualCitizen) actualCitizen.count = savedCitizen.count;
         });
@@ -38,6 +38,7 @@ export class SaveSystem {
 
         citizens.forEach(citizen => {
             citizen.count = 0;
+            citizen.level = 0;
         });
 
         return true;
