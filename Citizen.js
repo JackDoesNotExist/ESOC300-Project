@@ -5,10 +5,15 @@ class Citizen {
     this.baseCost = baseCost;
     this.costMult = costMult;
     this.count = count;
+    this.level = 1;
   }
 
   get currentCost() {
     return Math.floor(this.baseCost * Math.pow(this.costMult, this.count));
+  }
+
+  levelUp() {
+    this.level++;
   }
 
   purchase(player) {
