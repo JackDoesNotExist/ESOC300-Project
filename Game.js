@@ -35,7 +35,7 @@ class Game {
         });
 
         // Try loading a save file
-        SaveSystem.load(this.player, this.upgrades);
+        SaveSystem.load(this.player, this.upgrades, this.citizens);
 
         // First UI Render
         this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
@@ -46,7 +46,7 @@ class Game {
         setInterval(() => this.updateLoop(), 1000 / 30);
         
         // Auto-save every 10 seconds
-        setInterval(() => SaveSystem.save(this.player, this.upgrades), 10000);
+        setInterval(() => SaveSystem.save(this.player, this.upgrades, this.citizens), 10000);
     }
 
     handlePurchase(upgrade) {
@@ -75,7 +75,7 @@ class Game {
     }
 
     resetSave() {
-        SaveSystem.clearSave(this.player, this.upgrades);
+        SaveSystem.clearSave(this.player, this.upgrades, this.citizens);
     }
 }
 
