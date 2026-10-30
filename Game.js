@@ -13,6 +13,10 @@ class Game {
             new Upgrade('grandma', 'Grandma', 100, 1.15, 1, 'passive'),
             new Upgrade('sharp_clicks', 'Sharper Clicks', 50, 1.3, 1, 'click')
         ];
+        this.citizens = [
+            new Citizen('Woodcutter', 'money', 10, 1.15, 0),
+            new Citizen('Miner', 'money', 25, 1.15, 0)
+        ];
         
         this.init();
     }
@@ -34,7 +38,15 @@ class Game {
         SaveSystem.load(this.player, this.upgrades);
 
         // First UI Render
-        this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
+        this.ui.renderShop(
+            this.upgrades,
+            (upgrade) => this.handlePurchase(upgrade)
+        );
+
+        this.ui.renderCitizenShop(
+            this.citizens,
+            (citizen) => this.handleCitizenPurchase(citizen)
+        );
 
         // Start 30 FPS core update loop for passive income
         setInterval(() => this.updateLoop(), 1000 / 30);
@@ -46,6 +58,17 @@ class Game {
     handlePurchase(upgrade) {
         if (upgrade.purchase(this.player)) {
             this.ui.renderShop(this.upgrades, (u) => this.handlePurchase(u));
+            this.ui.updateDisplay(this.player);
+        }
+    }
+
+    handleCitizenPurchase(citizen) {
+        if (citizen.purchase(this.player)) {
+            this.ui.renderCitizenShop(
+                this.citizens,
+                (c) => this.handleCitizenPurchase(c)
+            );
+
             this.ui.updateDisplay(this.player);
         }
     }
