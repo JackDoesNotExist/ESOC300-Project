@@ -19,4 +19,5 @@ class Citizen {
     }
     return false;
   }
+  
 }
