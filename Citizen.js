@@ -18,25 +18,13 @@ export class Citizen {
 
   purchase(player) {
     const cost = this.currentCost;
-
-    console.log("Attempting purchase:", this.job);
-    console.log("Cost:", cost);
-    console.log("Player money:", player.money);
-    
     if (player.spendCurrency(this.currency, cost)) {
-      console.log("Purchase successful!");
-      
       player.addCitizen(this.job);
 
-      console.log("Citizens:", player.citizens);
-      console.log("Woodcutters:", player.woodcutters);
-      console.log("Miners:", player.miners);
-      
       this.count++;
       return true;
     }
 
-    console.log("Not enough currency!");
     return false;
   }
   
