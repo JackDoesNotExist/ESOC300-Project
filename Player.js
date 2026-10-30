@@ -60,6 +60,14 @@ export class Player {
         }
         return false;
     }
+
+    addCitizen(job) {
+        if (job === "Woodcutter") {
+            this.woodcutters += 1;
+        } else if (job === "Miner") {
+            this.miner += 1;
+        }
+    }
     
     reset() {
         this.money = 0;
