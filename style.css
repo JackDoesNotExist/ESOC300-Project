@@ -44,18 +44,18 @@ html {
 }
 
 #citizen-container.purchaseContainer {
+  display: flex;
+  column-gap: 10px;
   bottom: 70px;
   left: 120px;
 }
 
 #shop-container.purchaseContainer {
-  bottom: 60px;
+  bottom: 20px;
 }
 
 .purchaseContainer {
-  display: flex;
   position: relative;
-  column-gap: 10px;
 }
 
 .shop-btn {
