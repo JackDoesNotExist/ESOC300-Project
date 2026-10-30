@@ -44,7 +44,8 @@ html {
 }
 
 #citizen-container.purchaseContainer {
-  bottom: 30px;
+  bottom: 70px;
+  left: 120px;
 }
 
 #shop-container.purchaseContainer {
@@ -52,7 +53,9 @@ html {
 }
 
 .purchaseContainer {
+  display: flex;
   position: relative;
+  column-gap: 10px;
 }
 
 .shop-btn {
