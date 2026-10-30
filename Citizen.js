@@ -19,6 +19,7 @@ class Citizen {
   purchase(player) {
     const cost = this.currentCost;
     if (player.spendCurrency(this.currency, cost)) {
+      player.addCitizen(job);
       this.count++;
       return true;
     }
