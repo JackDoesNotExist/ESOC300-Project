@@ -47,6 +47,11 @@ html {
   
 }
 
+.shop-btn {
+  border: 4px solid var(--primary-color);
+  border-radius: 8px;
+}
+
 .pageButtonsSec {
   display: flex;
   justify-content: center;
