@@ -5,11 +5,16 @@ class Citizen {
     this.baseCost = baseCost;
     this.costMult = costMult;
     this.count = count;
+    this.incomeGenerated = 1;
+    this.level = 1;
   }
 
   get currentCost() {
     return Math.floor(this.baseCost * Math.pow(this.costMult, this.count));
   }
+
+  get incomeGenerated() {
+    return 
 
   purchase(player) {
     const cost = this.currenctCost;
