@@ -6,11 +6,11 @@ export class Player {
     // Determines currency types and calls related add function
     addCurrency(currency, amount) {
         if (currency === "money") {
-            this.addMoney(amount);
+            return this.addMoney(amount);
         } else if (currency === "wood") {
-            this.addWood(amount);
+            return this.addWood(amount);
         } else if (currency === "stone") {
-            this.addStone(amount);
+            return this.addStone(amount);
         }
     }
 
