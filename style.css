@@ -43,11 +43,13 @@ html {
   scale: 1.1;
 }
 
-#citizenContainer {
-  bottom: 120px;
+#citizenContainer.purchaseContainer {
+  position: relative;
+  bottom: 60px;
 }
 
-#shopContainer {
+#shopContainer.purchaseContainer {
+  position: relative;
   bottom: 80px;
 }
 
