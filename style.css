@@ -43,8 +43,16 @@ html {
   scale: 1.1;
 }
 
+#citizenContainer {
+  bottom: 120px;
+}
+
+#shopContainer {
+  bottom: 80px;
+}
+
 .purchaseContainer {
-  
+  position: fixed;
 }
 
 .shop-btn {
