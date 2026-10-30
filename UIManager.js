@@ -65,5 +65,6 @@ export class UIManager {
             btn.onclick = () => onPurchaseCallback(citizen);
 
             this.citizenContainer.appendChild(btn);
+        }
     }
 }
