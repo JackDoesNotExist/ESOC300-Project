@@ -1,4 +1,4 @@
-class Citizen {
+export class Citizen {
   constructor(job, currency, baseCost, costMult, count) {
     this.job = job;
     this.currency = currency;
