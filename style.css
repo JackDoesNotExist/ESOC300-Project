@@ -50,6 +50,10 @@ html {
 .shop-btn {
   border: 4px solid var(--primary-color);
   border-radius: 8px;
+
+  font-size: 1.5rem;
+  background-color: #86592d;
+  color: var(--primary-color);
 }
 
 .pageButtonsSec {
