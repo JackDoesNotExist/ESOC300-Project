@@ -64,8 +64,10 @@ export class Player {
     addCitizen(job) {
         if (job === "Woodcutter") {
             this.woodcutters += 1;
+            this.passiveWood += 1;
         } else if (job === "Miner") {
             this.miners += 1;
+            this.passiveStone += 1;
         }
         this.citizens += 1;
     }
@@ -74,11 +76,16 @@ export class Player {
         this.money = 0;
         this.wood = 0;
         this.stone = 0;
+        
         this.citizens = 0;
         this.woodcutters = 0;
         this.miners = 0;
+        
         this.totalClicks = 0;
         this.clickPower = 1;
+        
         this.passiveIncome = 0;
+        this.passiveWood = 0;
+        this.passiveStone = 0;
     }
 }
