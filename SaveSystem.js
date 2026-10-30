@@ -3,7 +3,7 @@ export class SaveSystem {
         const saveData = {
             player: player,
             upgrades: upgrades.map(u => ({ id: u.id, level: u.level })),
-            citizens: citizens.map(c => ({ job: c.job, count, u.count}))
+            citizens: citizens.map(c => ({ job: c.job, count: c.count}))
         };
         localStorage.setItem('myClickerSave', JSON.stringify(saveData));
     }
