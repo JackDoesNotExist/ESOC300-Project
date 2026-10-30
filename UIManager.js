@@ -12,12 +12,7 @@ export class UIManager {
         this.clickButton = document.getElementById('main-button');
         
         this.shopContainer = document.getElementById('shop-container');
-        this.shopContainer.style.position = "fixed";
-        this.shopContainer.style.bottom = "80px";
-
         this.citizenContainer = document.getElementById('citizen-container');
-        this.citizenContainer.style.position = "fixed";
-        this.citizenContainer.style.bottom = "120px";
     }
 
     updateDisplay(player) {
