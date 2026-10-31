@@ -20,7 +20,7 @@ export class Citizen {
   purchase(player) {
     const cost = this.currentCost;
 
-    if (!player.isAtCitizenCap(this.currency) && player.spendCurrency(this.currency, cost)) {
+    if (!player.isAtCitizenCap(this.job) && player.spendCurrency(this.currency, cost)) {
       player.addCitizen(this.job, this.baseIncome);
       this.count++;
       return true;
