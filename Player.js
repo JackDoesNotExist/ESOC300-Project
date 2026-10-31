@@ -61,18 +61,12 @@ export class Player {
         return false;
     }
 
-    isAtWoodcutterCap() {
-        if (this.woodcutters == this.woodcutterCap) {
-            return true;
+    isAtCitizenCap(currency) {
+        if (currency === "wood") {
+            return this.woodcutters == this.woodcutterCap;
+        } else if (currency === "stone") {
+            return this.miners == this.minerCap;
         }
-        return false;
-    }
-
-    isAtMinerCap() {
-        if (this.miners == this.minerCap) {
-            return true;
-        }
-        return false;
     }
 
     addCitizen(job, incomeGenerated) {
