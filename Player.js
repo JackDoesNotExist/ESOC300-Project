@@ -61,17 +61,29 @@ export class Player {
         return false;
     }
 
-    addCitizen(job, incomeGenerated) {
-        if (this.citizens != this.citizenCap) {
-            if (job === "Woodcutter" && this.woodcutters != this.woodcutterCap) {
-                this.woodcutters += 1;
-                this.passiveWood += incomeGenerated;
-            } else if (job === "Miner" && this.miners != this.minerCap) {
-                this.miners += 1;
-                this.passiveStone += incomeGenerated;
-            }
-            this.citizens += 1;
+    isAtWoodcutterCap() {
+        if (this.woodcutters == this.woodcutterCap) {
+            return true;
         }
+        return false;
+    }
+
+    isAtMinerCap() {
+        if (this.miners == this.minerCap) {
+            return true;
+        }
+        return false;
+    }
+
+    addCitizen(job, incomeGenerated) {
+        if (job === "Woodcutter") {
+            this.woodcutters += 1;
+            this.passiveWood += incomeGenerated;
+        } else if (job === "Miner") {
+            this.miners += 1;
+            this.passiveStone += incomeGenerated;
+        }
+        this.citizens += 1;
     }
 
     get citizenCap() {
