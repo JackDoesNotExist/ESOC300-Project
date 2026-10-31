@@ -12,6 +12,10 @@ export class Citizen {
     return Math.floor(this.baseCost * Math.pow(this.costMult, this.count));
   }
 
+  get incomeGenerated() {
+    return Math.floor(0.1 * count)
+  }
+
   levelUp() {
     this.level++;
   }
