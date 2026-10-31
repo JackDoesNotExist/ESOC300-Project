@@ -73,7 +73,7 @@ export class Player {
     }
 
     get citizenCap() {
-        return = this.woodcutterCap + this.minerCap;
+        return this.woodcutterCap + this.minerCap;
     }
     
     reset() {
