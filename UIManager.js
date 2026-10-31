@@ -29,9 +29,9 @@ export class UIManager {
         this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
         this.minerText.innerText = Math.floor(player.miners).toLocaleString();
 
-        this.citizenCapText = document.getElementById('citizen-cap-display');
-        this.woodcutterCapText = document.getElementById('woodcutter-cap-display');
-        this.minerCapText = document.getElementById('miner-cap-display');
+        this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
+        this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
+        this.minerCapText.innerText = Math.floor(player.minerCap).toLocaleString();
 
         this.moneyCPS.innerText = player.passiveIncome.toFixed(1);
         this.woodCPS.innerText = player.passiveWood.toFixed(1);
