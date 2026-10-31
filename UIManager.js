@@ -7,6 +7,9 @@ export class UIManager {
         this.citizenText = document.getElementById('citizen-display');
         this.woodcutterText = document.getElementById('woodcutter-display');
         this.minerText = document.getElementById('miner-display');
+        this.citizenCapText = document.getElementById('citizen-cap-display');
+        this.woodcutterCapText = document.getElementById('woodcutter-cap-display');
+        this.minerCapText = document.getElementById('miner-cap-display');
 
         this.moneyCPS = document.getElementById('money-cps-display');
         this.woodCPS = document.getElementById('wood-cps-display');
@@ -25,6 +28,10 @@ export class UIManager {
         this.citizenText.innerText = Math.floor(player.citizens).toLocaleString();
         this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
         this.minerText.innerText = Math.floor(player.miners).toLocaleString();
+
+        this.citizenCapText = document.getElementById('citizen-cap-display');
+        this.woodcutterCapText = document.getElementById('woodcutter-cap-display');
+        this.minerCapText = document.getElementById('miner-cap-display');
 
         this.moneyCPS.innerText = player.passiveIncome.toFixed(1);
         this.woodCPS.innerText = player.passiveWood.toFixed(1);
