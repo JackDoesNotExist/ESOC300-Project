@@ -7,7 +7,8 @@ export class UIManager {
         this.citizenText = document.getElementById('citizen-display');
         this.woodcutterText = document.getElementById('woodcutter-display');
         this.minerText = document.getElementById('miner-display');
-        
+
+        this.totalCPS = 0.0;
         this.cpsText = document.getElementById('cps-display');
         this.clickButton = document.getElementById('main-button');
         
@@ -22,7 +23,9 @@ export class UIManager {
         this.citizenText.innerText = Math.floor(player.citizens).toLocaleString();
         this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
         this.minerText.innerText = Math.floor(player.miners).toLocaleString();
-        this.cpsText.innerText = player.passiveIncome.toFixed(1);
+
+        this.totalCPS += player.passiveIncome + player.passiveWood + player.passiveStone;
+        this.cpsText.innerText = player.totalCPS.toFixed(1);
     }
 
     renderShop(upgrades, onPurchaseCallback) {
