@@ -15,7 +15,7 @@ class Game {
         ];
         this.citizens = [
             new Citizen('Woodcutter', 'money', 10, 1.15, 0),
-            new Citizen('Miner', 'money', 25, 1.15, 0)
+            new Citizen('Miner', 'money', 20, 1.15, 0)
         ];
         
         this.init();
