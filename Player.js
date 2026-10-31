@@ -61,13 +61,13 @@ export class Player {
         return false;
     }
 
-    addCitizen(job) {
+    addCitizen(job, incomeGenerated) {
         if (job === "Woodcutter") {
             this.woodcutters += 1;
-            this.passiveWood += 1;
+            this.passiveWood += incomeGenerated;
         } else if (job === "Miner") {
             this.miners += 1;
-            this.passiveStone += 1;
+            this.passiveStone += incomeGenerated;
         }
         this.citizens += 1;
     }
