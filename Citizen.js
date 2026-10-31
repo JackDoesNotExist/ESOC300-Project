@@ -6,6 +6,7 @@ export class Citizen {
     this.costMult = costMult;
     this.count = count;
     this.level = 1;
+    this.baseIncome = 0.1;
   }
 
   get currentCost() {
@@ -13,7 +14,7 @@ export class Citizen {
   }
 
   get incomeGenerated() {
-    return Math.floor(0.1 * count)
+    return this.baseIncome * this.count;
   }
 
   levelUp() {
@@ -23,7 +24,7 @@ export class Citizen {
   purchase(player) {
     const cost = this.currentCost;
     if (player.spendCurrency(this.currency, cost)) {
-      player.addCitizen(this.job);
+      player.addCitizen(this.job, this.incomeGenerated);
       this.count++;
       return true;
     }
