@@ -85,7 +85,7 @@ export class Player {
         this.woodcutters = 0;
         this.miners = 0;
         this.citizenCap;
-        this.woocutterCap = 5;
+        this.woodcutterCap = 5;
         this.minerCap = 5;
         
         this.totalClicks = 0;
