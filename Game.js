@@ -53,7 +53,7 @@ class Game {
             this.ui.renderShop(this.upgrades, (u) => this.handlePurchase(u));
             this.ui.updateDisplay(this.player);
         } else {
-            failPurchase();
+            this.failPurchase();
         }
     }
 
@@ -62,7 +62,7 @@ class Game {
             this.ui.renderCitizenShop(this.citizens, (c) => this.handleCitizenPurchase(c));
             this.ui.updateDisplay(this.player);
         } else {
-            failPurchase();
+            this.failPurchase();
         }
     }
 
