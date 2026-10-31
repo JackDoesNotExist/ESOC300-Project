@@ -70,6 +70,15 @@ class Game {
             this.failPurchase();
         }
     }
+    
+    handleBuildingPurchase(building) {
+        if (building.purchase(this.player)) {
+            this.ui.renderBuildingShop(this.buildings, (b) => this.handleBuildingPurchase(b));
+            this.ui.updateDisplay(this.player);
+        } else {
+            this.failPurchase();
+        }
+    }
 
     updateLoop() {
         // Passive income divided across 30 ticks per second
