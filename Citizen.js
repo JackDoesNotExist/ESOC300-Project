@@ -1,10 +1,10 @@
 export class Citizen {
-  constructor(job, currency, baseCost, costMult, count) {
+  constructor(job, currency, baseCost, costMult) {
     this.job = job;
     this.currency = currency;
     this.baseCost = baseCost;
     this.costMult = costMult;
-    this.count = count;
+    this.count = 0;
     this.level = 1;
     this.baseIncome = 0.2;
   }
