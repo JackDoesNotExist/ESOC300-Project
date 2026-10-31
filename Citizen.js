@@ -21,7 +21,7 @@ export class Citizen {
     const cost = this.currentCost;
     if (player.spendCurrency(this.currency, cost)) {
       this.count++;
-      player.addCitizen(this.job, this.incomeGenerated);
+      Console.log(player.addCitizen(this.job, this.incomeGenerated));
       return true;
     }
 
