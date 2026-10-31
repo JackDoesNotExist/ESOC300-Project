@@ -37,6 +37,10 @@ class Game {
         // Try loading a save file
         SaveSystem.load(this.player, this.upgrades, this.citizens);
 
+        console.log("Woodcutter cap:", this.player.woodcutterCap);
+        console.log("Miner cap:", this.player.minerCap);
+        console.log("Citizen cap:", this.player.citizenCap);
+
         // First UI Render
         this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
 
