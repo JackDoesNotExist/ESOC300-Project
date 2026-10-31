@@ -3,6 +3,7 @@ import { Upgrade } from './Upgrade.js';
 import { UIManager } from './UIManager.js';
 import { SaveSystem } from './SaveSystem.js';
 import { Citizen } from './Citizen.js';
+import { Building } from './Building.js';
 
 class Game {
     constructor() {
@@ -14,8 +15,12 @@ class Game {
             new Upgrade('sharp_clicks', 'Sharper Clicks', 50, 1.3, 1, 'click')
         ];
         this.citizens = [
-            new Citizen('Woodcutter', 'money', 10, 1.15, 0),
-            new Citizen('Miner', 'money', 20, 1.15, 0)
+            new Citizen('Woodcutter', 'money', 20, 1.15, 0),
+            new Citizen('Miner', 'money', 40, 1.15, 0)
+        ];
+        this.buildings = [
+            new Building('Logging Camp', baseCost1, null, costMult, currency1, currency2, count),
+            new Building('Mining Camp', baseCost1, baseCost2, costMult, currency1, currency2, count)
         ];
         
         this.init();
