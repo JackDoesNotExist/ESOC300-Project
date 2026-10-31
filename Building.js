@@ -7,4 +7,8 @@ export class Building {
     this.currency2;
     this.count = 0;
   }
+
+  get currentCost() {
+    return Math.floor(this.baseCost * Math.pow(this.costMult, this.count));
+  }
 }
