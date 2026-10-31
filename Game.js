@@ -15,12 +15,12 @@ class Game {
             new Upgrade('sharp_clicks', 'Sharper Clicks', 50, 1.3, 1, 'click')
         ];
         this.citizens = [
-            new Citizen('Woodcutter', 'money', 20, 1.15, 0),
-            new Citizen('Miner', 'money', 40, 1.15, 0)
+            new Citizen('Woodcutter', 'money', 20, 1.15),
+            new Citizen('Miner', 'money', 40, 1.15)
         ];
         this.buildings = [
-            new Building('Logging Camp', baseCost1, null, costMult, currency1, currency2, count),
-            new Building('Mining Camp', baseCost1, baseCost2, costMult, currency1, currency2, count)
+            new Building('Logging Camp', 100, null, 1.15, 'wood', null),
+            new Building('Mining Camp', 150, 50, 1.15, 'wood', 'stone')
         ];
         
         this.init();
