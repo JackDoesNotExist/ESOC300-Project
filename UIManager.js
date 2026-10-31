@@ -25,7 +25,7 @@ export class UIManager {
         this.minerText.innerText = Math.floor(player.miners).toLocaleString();
 
         this.totalCPS += player.passiveIncome + player.passiveWood + player.passiveStone;
-        this.cpsText.innerText = player.totalCPS.toFixed(1);
+        this.cpsText.innerText = Math.floor(player.totalCPS).toFixed(1);
     }
 
     renderShop(upgrades, onPurchaseCallback) {
