@@ -8,8 +8,9 @@ export class UIManager {
         this.woodcutterText = document.getElementById('woodcutter-display');
         this.minerText = document.getElementById('miner-display');
 
-        this.totalCPS = 0.0;
-        this.cpsText = document.getElementById('cps-display');
+        this.moneyCPS = document.getElementById('money-cps-display');
+        this.woodCPS = document.getElementById('wood-cps-display');
+        this.stoneCPS = document.getElementById('stone-cps-display');
         this.clickButton = document.getElementById('main-button');
         
         this.shopContainer = document.getElementById('shop-container');
@@ -20,12 +21,14 @@ export class UIManager {
         this.moneyText.innerText = Math.floor(player.money).toLocaleString();
         this.woodText.innerText = Math.floor(player.wood).toLocaleString();
         this.stoneText.innerText = Math.floor(player.stone).toLocaleString();
+        
         this.citizenText.innerText = Math.floor(player.citizens).toLocaleString();
         this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
         this.minerText.innerText = Math.floor(player.miners).toLocaleString();
 
-        this.totalCPS = player.passiveIncome + player.passiveWood + player.passiveStone;
-        this.cpsText.innerText = this.totalCPS.toFixed(1);
+        this.moneyCPS.innerText = player.passiveIncome.toFixed(1);
+        this.woodCPS.innerText = player.passiveWood.toFixed(1);
+        this.stoneCPS.innerText = player.passiveStone.toFixed(1);
     }
 
     renderShop(upgrades, onPurchaseCallback) {
