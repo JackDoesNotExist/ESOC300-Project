@@ -84,9 +84,6 @@ export class Player {
         this.citizens = 0;
         this.woodcutters = 0;
         this.miners = 0;
-        this.citizenCap;
-        this.woodcutterCap = 5;
-        this.minerCap = 5;
         
         this.totalClicks = 0;
         this.clickPower = 1;
