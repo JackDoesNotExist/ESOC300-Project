@@ -75,4 +75,15 @@ export class UIManager {
             this.citizenContainer.appendChild(btn);
         });
     }
+
+    playErrorSound(buttonID) {
+        const button = document.getElementById(buttonID);
+  
+        const audio = new Audio('./error_01.wav');
+      
+        button.addEventListener('click', () => {
+        audio.currentTime = 0; 
+        audio.play();
+      });
+    }
 }
