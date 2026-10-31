@@ -53,9 +53,7 @@ class Game {
             this.ui.renderShop(this.upgrades, (u) => this.handlePurchase(u));
             this.ui.updateDisplay(this.player);
         } else {
-            const audio = new Audio('./error_01.wav');
-            audio.currentTime = 0; 
-            audio.play();
+            failPurchase();
         }
     }
 
@@ -64,9 +62,7 @@ class Game {
             this.ui.renderCitizenShop(this.citizens, (c) => this.handleCitizenPurchase(c));
             this.ui.updateDisplay(this.player);
         } else {
-            const audio = new Audio('./error_01.wav');
-            audio.currentTime = 0; 
-            audio.play();
+            failPurchase();
         }
     }
 
@@ -83,6 +79,12 @@ class Game {
         SaveSystem.clearSave(this.player, this.upgrades, this.citizens);
         this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
+    }
+
+    failPurchase() {
+        const audio = new Audio('./error_01.wav');
+        audio.currentTime = 0; 
+        audio.play();
     }
 }
 
