@@ -1,11 +1,11 @@
 export class Building {
-  constructor(building, baseCost1, baseCost2, costMult, currency1, currency2, count) {
-    this.building;
-    this.baseCost1;
-    this.baseCost2;
-    this.costMult;
-    this.currency1;
-    this.currency2;
+  constructor(name, baseCost1, baseCost2, costMult, currency1, currency2, count) {
+    this.name = name;
+    this.baseCost1 = baseCost1;
+    this.baseCost2 = baseCost2;
+    this.costMult = costMult;
+    this.currency1 = currency1;
+    this.currency2 = currency2;
     this.count = 0;
   }
 
