@@ -63,9 +63,9 @@ export class Player {
 
     isAtCitizenCap(currency) {
         if (currency === "wood") {
-            return this.woodcutters == this.woodcutterCap;
+            return this.woodcutters >= this.woodcutterCap;
         } else if (currency === "stone") {
-            return this.miners == this.minerCap;
+            return this.miners >= this.minerCap;
         }
     }
 
