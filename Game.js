@@ -53,20 +53,20 @@ class Game {
             this.ui.renderShop(this.upgrades, (u) => this.handlePurchase(u));
             this.ui.updateDisplay(this.player);
         } else {
-            this.ui.playErrorSound() {
-                
-            }
+            const audio = new Audio('./error_01.wav');
+            audio.currentTime = 0; 
+            audio.play();
         }
     }
 
     handleCitizenPurchase(citizen) {
         if (citizen.purchase(this.player)) {
-            this.ui.renderCitizenShop(
-                this.citizens,
-                (c) => this.handleCitizenPurchase(c)
-            );
-
+            this.ui.renderCitizenShop(this.citizens, (c) => this.handleCitizenPurchase(c));
             this.ui.updateDisplay(this.player);
+        } else {
+            const audio = new Audio('./error_01.wav');
+            audio.currentTime = 0; 
+            audio.play();
         }
     }
 
