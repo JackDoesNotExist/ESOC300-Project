@@ -64,7 +64,10 @@ export class Player {
     addCitizen(job, incomeGenerated) {
         if (job === "Woodcutter") {
             this.woodcutters += 1;
+            console.log("Income received:", incomeGenerated);
+            console.log("Passive wood before:", this.passiveWood);
             this.passiveWood += incomeGenerated;
+            console.log("Passive wood after:", this.passiveWood);
         } else if (job === "Miner") {
             this.miners += 1;
             this.passiveStone += incomeGenerated;
