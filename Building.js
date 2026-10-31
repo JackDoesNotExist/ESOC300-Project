@@ -25,15 +25,20 @@ export class Building {
     const cost1 = this.currentCost1;
     const cost2 = this.currentCost2;
 
-    // Check if player can afford and spend the currencies if possible.
-    if (!player.spendCurrency(this.currency1, cost1)) {
+    // Check affordability
+    if (player[this.currency1] < cost1) {
       return false;
     }
 
+    if (this.currency2 !== null && player[this.currency2] < cost2) {
+      return false;
+    }
+
+    // Spend currencies
+    player.spendCurrency(this.currency1, cost1);
+
     if (this.currency2 !== null) {
-      if (!player.spendCurrency(this.currency2, cost2)) {
-        return false;
-      }
+      player.spendCurrency(this.currency2, cost2);
     }
 
     this.count++;
