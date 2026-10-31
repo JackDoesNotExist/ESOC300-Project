@@ -24,8 +24,8 @@ export class UIManager {
         this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
         this.minerText.innerText = Math.floor(player.miners).toLocaleString();
 
-        this.totalCPS += player.passiveIncome + player.passiveWood + player.passiveStone;
-        this.cpsText.innerText = player.totalCPS;
+        this.totalCPS = player.passiveIncome + player.passiveWood + player.passiveStone;
+        this.cpsText.innerText = this.totalCPS.toFixed(1);
     }
 
     renderShop(upgrades, onPurchaseCallback) {
