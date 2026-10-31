@@ -19,9 +19,10 @@ export class Citizen {
 
   purchase(player) {
     const cost = this.currentCost;
+    
     if (player.spendCurrency(this.currency, cost)) {
+      player.addCitizen(this.job, this.baseIncome);
       this.count++;
-      player.addCitizen(this.job, this.incomeGenerated);
       return true;
     }
 
