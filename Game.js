@@ -19,8 +19,8 @@ class Game {
             new Citizen('Miner', 'money', 40, 1.15)
         ];
         this.buildings = [
-            new Building('Logging Camp', 100, null, 1.15, 'wood', null),
-            new Building('Mining Camp', 150, 50, 1.15, 'wood', 'stone')
+            new Building('Logging Camp', 50, null, 1.15, 'wood', null),
+            new Building('Mining Camp', 100, 50, 1.15, 'wood', 'stone')
         ];
         
         this.init();
