@@ -80,17 +80,6 @@ class Game {
         this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
     }
-
-    playErrorSound(buttonID) {
-        const button = document.getElementById(buttonID);
-  
-        const audio = new Audio('./error_01.wav');
-      
-        button.addEventListener('click', () => {
-        audio.currentTime = 0; 
-        audio.play();
-      });
-    }
 }
 
 // Fire up the game engine!
