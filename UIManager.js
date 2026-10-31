@@ -18,6 +18,7 @@ export class UIManager {
         
         this.shopContainer = document.getElementById('shop-container');
         this.citizenContainer = document.getElementById('citizen-container');
+        this.buildingContainer = document.getElementById('building-container');
     }
 
     updateDisplay(player) {
@@ -73,6 +74,25 @@ export class UIManager {
             btn.onclick = () => onPurchaseCallback(citizen);
 
             this.citizenContainer.appendChild(btn);
+        });
+    }
+
+    renderBuildingShop(buildings, onPurchaseCallback) {
+        this.buildingContainer.innerHTML = '';
+
+        buildings.forEach(citizen => {
+            const btn = document.createElement('button');
+
+            btn.className = 'shop-btn';
+            btn.innerHTML = `
+                ${building.name} (Owned: ${building.count})
+                <br>
+                Cost: ${building.currentCost1}
+            `;
+
+            btn.onclick = () => onPurchaseCallback(building);
+
+            this.buildingContainer.appendChild(btn);
         });
     }
 
