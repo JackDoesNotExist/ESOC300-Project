@@ -74,6 +74,10 @@ export class Player {
         }
         this.citizens += 1;
     }
+
+    get citizenCap() {
+        return = this.woodcutterCap + this.minerCap;
+    }
     
     reset() {
         this.money = 0;
@@ -83,6 +87,8 @@ export class Player {
         this.citizens = 0;
         this.woodcutters = 0;
         this.miners = 0;
+        this.woocutterCap = 5;
+        this.minerCap = 5;
         
         this.totalClicks = 0;
         this.clickPower = 1;
