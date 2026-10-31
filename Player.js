@@ -61,7 +61,7 @@ export class Player {
         return false;
     }
 
-    isAtCitizenCap(currency) {
+    isAtCitizenCap(job) {
         if (job === "Woodcutter") {
             return this.woodcutters >= this.woodcutterCap;
         } else if (job === "Miner") {
