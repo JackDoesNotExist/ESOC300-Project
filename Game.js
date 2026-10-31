@@ -48,15 +48,15 @@ class Game {
         setInterval(() => SaveSystem.save(this.player, this.upgrades, this.citizens), 10000);
     }
 
-    handlePurchase(upgrade) {
-        if (upgrade.purchase(this.player)) {
+    handlePurchase(upgrade, this.ui) {
+        if (upgrade.purchase(this.player, this.ui)) {
             this.ui.renderShop(this.upgrades, (u) => this.handlePurchase(u));
             this.ui.updateDisplay(this.player);
         }
     }
 
-    handleCitizenPurchase(citizen) {
-        if (citizen.purchase(this.player)) {
+    handleCitizenPurchase(citizen, this.ui) {
+        if (citizen.purchase(this.player, this.ui)) {
             this.ui.renderCitizenShop(
                 this.citizens,
                 (c) => this.handleCitizenPurchase(c)
