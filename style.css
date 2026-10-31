@@ -15,9 +15,11 @@ html {
 
 .mainButtonSec {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  min-height: 60vh;
+  min-height: 40vh;
+  margin-right: 70px;
+  transform: translateY(-100px);
 }
 
 .mainButton {
