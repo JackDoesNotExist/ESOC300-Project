@@ -6,7 +6,7 @@ export class Citizen {
     this.costMult = costMult;
     this.count = count;
     this.level = 1;
-    this.baseIncome = 0.1;
+    this.baseIncome = 0.2;
   }
 
   get currentCost() {
