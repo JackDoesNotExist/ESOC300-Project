@@ -1,5 +1,8 @@
 export class Building {
-  constructor() {
-    
+  constructor(building, baseCost, costMult, currency) {
+    this.building;
+    this.baseCost;
+    this.costMult;
+    this.currency;
   }
 }
