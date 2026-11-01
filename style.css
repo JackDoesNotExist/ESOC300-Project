@@ -48,6 +48,7 @@ html {
 }
 
 .buildingContainer {
+  margin-right: 505px;
   border: 6px solid var(--primary-color);
   border-radius: 8px;
 }
