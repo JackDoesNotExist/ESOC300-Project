@@ -58,13 +58,9 @@ class Game {
     }
 
     handleUpgradePurchase(upgrade) {
-        const success = upgrade.purchase(this.player);
         
-        if (success) {
-            this.ui.renderUpgradeShop(
-                this.upgrades,
-                (u) => this.handleUpgradePurchase(u)
-            );
+        if (upgrade.purchase(this.player)) {
+            this.ui.renderUpgradeShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
             this.ui.updateDisplay(this.player);
         } else {
             this.failPurchase();
