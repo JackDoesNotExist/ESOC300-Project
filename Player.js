@@ -111,7 +111,7 @@ export class Player {
     }
     
     reset() {
-        this.resources = {money: 0, wood: 0, stone: 0, food: 50};
+        this.resources = {money: 0, wood: 0, stone: 0, food: 100};
         this.workers = {citizens: 0, woodcutters: 0, miners: 0, hunters: 0};
 
         this.woodcutterCap = 5;
