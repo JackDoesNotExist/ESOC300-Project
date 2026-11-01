@@ -1,12 +1,12 @@
 export class Citizen {
-  constructor(job, resource, baseCost, costMult) {
+  constructor(job, resource, baseCost, costMult, baseIncome) {
     this.job = job;
     this.resource = resource;
     this.baseCost = baseCost;
     this.costMult = costMult;
     this.count = 0;
     this.level = 1;
-    this.baseIncome = 0.2;
+    this.baseIncome = baseIncome;
   }
 
   get currentCost() {
