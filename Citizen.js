@@ -1,7 +1,7 @@
 export class Citizen {
-  constructor(job, currency, baseCost, costMult) {
+  constructor(job, resource, baseCost, costMult) {
     this.job = job;
-    this.currency = currency;
+    this.resource = resource;
     this.baseCost = baseCost;
     this.costMult = costMult;
     this.count = 0;
@@ -20,7 +20,7 @@ export class Citizen {
   purchase(player) {
     const cost = this.currentCost;
 
-    if (!player.isAtCitizenCap(this.job) && player.spendCurrency(this.currency, cost)) {
+    if (!player.isAtCitizenCap(this.job) && player.spendResource(this.resource, cost)) {
       player.addCitizen(this.job, this.baseIncome);
       this.count++;
       return true;
