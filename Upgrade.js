@@ -1,5 +1,5 @@
 export class Upgrade {
-    constructor(id, name, baseCost, costMult, incomeGenerated, type = 'passive', resource) {
+    constructor(id, name, baseCost, costMult, incomeGenerated, type = 'passive', resource, worker) {
         this.id = id;
         this.name = name;
         this.baseCost = baseCost;
@@ -7,6 +7,7 @@ export class Upgrade {
         this.incomeGenerated = incomeGenerated; // Gained per level
         this.type = type; // 'click' or 'passive'
         this.resource = resource;
+        this.worker = worker;
         this.level = 0;
     }
 
@@ -29,7 +30,7 @@ export class Upgrade {
                 } else if (this.resource === 'stone') {
                     player.passiveStone += this.incomeGenerated;
                 } else if (this.resource === 'food') {
-                    player.passiveFood += this.incomeGenerated;
+                    this.worker.baseIncome * 2;
                 }
             }
             return true;
