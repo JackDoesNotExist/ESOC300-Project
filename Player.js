@@ -96,7 +96,6 @@ export class Player {
             this.passiveStone += incomeGenerated;
         } else if (job === "Hunter") {
             this.workers['hunters'] += 1;
-            this.passiveFood += incomeGenerated;
         }
         this.workers['citizens'] += 1;
     }
@@ -104,9 +103,13 @@ export class Player {
     get citizenCap() {
         return this.woodcutterCap + this.minerCap + this.hunterCap;
     }
+
+    get passiveFood() {
+        return this.resources['citizens'] * 0.1;
+    }
     
     reset() {
-        this.resources = {money: 0, wood: 0, stone: 0, food: 0};
+        this.resources = {money: 0, wood: 0, stone: 0, food: 50};
         this.workers = {citizens: 0, woodcutters: 0, miners: 0, hunters: 0};
 
         this.woodcutterCap = 5;
@@ -119,6 +122,5 @@ export class Player {
         this.passiveIncome = 0;
         this.passiveWood = 0;
         this.passiveStone = 0;
-        this.passiveFood = 0;
     }
 }
