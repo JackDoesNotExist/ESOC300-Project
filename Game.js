@@ -94,6 +94,7 @@ class Game {
     resetSave() {
         SaveSystem.clearSave(this.player, this.upgrades, this.citizens);
         this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
+        this.ui.renderBuildingShop(this.buildings, (building) => this.handleCitizenPurchase(building));
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
     }
 
