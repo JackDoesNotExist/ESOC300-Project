@@ -11,6 +11,8 @@ export class Player {
             return this.addWood(amount);
         } else if (resource === "stone") {
             return this.addStone(amount);
+        } else if (resource === "food") {
+            return this.addFood(amount);
         }
     }
 
@@ -26,6 +28,10 @@ export class Player {
         this.resources['stone'] += amount;
     }
 
+    addFood(amount) {
+        this.resources['food'] += amount;
+    }
+
     // Determines resource types and calls related spend function
     spendResource(resource, amount) {
         if (resource === "money") {
@@ -34,6 +40,8 @@ export class Player {
             return this.spendWood(amount);
         } else if (resource === "stone") {
             return this.spendStone(amount);
+        } else if (resource === "food") {
+            return this.spendFood(amount);
         }
     }
 
@@ -61,11 +69,21 @@ export class Player {
         return false;
     }
 
+    spendFood(amount) {
+        if (this.resources['food'] >= amount) {
+            this.resources['food'] -= amount;
+            return true;
+        }
+        return false;
+    }
+
     isAtCitizenCap(job) {
         if (job === "Woodcutter") {
             return this.workers['woodcutters'] >= this.woodcutterCap;
         } else if (job === "Miner") {
             return this.workers['miners'] >= this.minerCap;
+        } else if (job === "Hunter") {
+            return this.workers['hunters'] >= this.hunterCap;
         }
     }
 
