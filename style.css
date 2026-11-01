@@ -45,6 +45,12 @@ html {
   scale: 1.1;
 }
 
+#building-container.purchaseContainer {
+  display: flex;
+  column-gap: 10px;
+  bottom: 50px;
+}
+
 #citizen-container.purchaseContainer {
   display: flex;
   column-gap: 10px;
