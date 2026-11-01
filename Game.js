@@ -55,8 +55,21 @@ class Game {
     }
 
     handleUpgradePurchase(upgrade) {
-        if (upgrade.purchase(this.player)) {
-            this.ui.renderUpgradeShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
+        console.log("Upgrade button clicked:", upgrade.name);
+        console.log("Current money:", this.player.money);
+        console.log("Upgrade cost:", upgrade.currentCost);
+
+        const success = upgrade.purchase(this.player);
+
+        console.log("Purchase successful:", success);
+        console.log("Upgrade level:", upgrade.level);
+        console.log("Money remaining:", this.player.money);s
+        
+        if (success) {
+            this.ui.renderUpgradeShop(
+                this.upgrades,
+                (u) => this.handleUpgradePurchase(u)
+            );
             this.ui.updateDisplay(this.player);
         } else {
             this.failPurchase();
