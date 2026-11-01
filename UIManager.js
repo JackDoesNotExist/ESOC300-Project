@@ -3,17 +3,22 @@ export class UIManager {
         this.moneyText = document.getElementById('money-display');
         this.woodText = document.getElementById('wood-display');
         this.stoneText = document.getElementById('stone-display');
+        this.foodText = document.getElementById('food-display');
         
         this.citizenText = document.getElementById('citizen-display');
         this.woodcutterText = document.getElementById('woodcutter-display');
         this.minerText = document.getElementById('miner-display');
+        this.hunterText = document.getElementById('hunter-display');
+        
         this.citizenCapText = document.getElementById('citizen-cap-display');
         this.woodcutterCapText = document.getElementById('woodcutter-cap-display');
         this.minerCapText = document.getElementById('miner-cap-display');
+        this.hunterCapText = document.getElementById('hunter-cap-display');
 
         this.moneyCPS = document.getElementById('money-cps-display');
         this.woodCPS = document.getElementById('wood-cps-display');
         this.stoneCPS = document.getElementById('stone-cps-display');
+        this.foodCPS = document.getElementById('food-cps-display');
         this.clickButton = document.getElementById('main-button');
         
         this.shopContainer = document.getElementById('shop-container');
@@ -22,13 +27,15 @@ export class UIManager {
     }
 
     updateDisplay(player) {
-        this.moneyText.innerText = Math.floor(player.resources["money"]).toLocaleString();
-        this.woodText.innerText = Math.floor(player.resources["wood"]).toLocaleString();
-        this.stoneText.innerText = Math.floor(player.resources["stone"]).toLocaleString();
+        this.moneyText.innerText = Math.floor(player.resources['money']).toLocaleString();
+        this.woodText.innerText = Math.floor(player.resources['wood']).toLocaleString();
+        this.stoneText.innerText = Math.floor(player.resources['stone']).toLocaleString();
+        this.foodText.innerText = Math.floor(player.resources['food']).toLocaleString();
         
-        this.citizenText.innerText = Math.floor(player.citizens).toLocaleString();
-        this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
-        this.minerText.innerText = Math.floor(player.miners).toLocaleString();
+        this.citizenText.innerText = Math.floor(player.workers['citizens']).toLocaleString();
+        this.woodcutterText.innerText = Math.floor(player.workers['woodcutters']).toLocaleString();
+        this.minerText.innerText = Math.floor(player.workers['miners']).toLocaleString();
+        this.hunterText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
 
         this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
         this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
