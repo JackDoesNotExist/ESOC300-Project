@@ -40,9 +40,6 @@ export class UIManager {
     }
 
     renderUpgradeShop(upgrades, onPurchaseCallback) {
-        console.log("Rendering upgrade shop...");
-        console.log("Upgrades:", upgrades);
-        
         this.shopContainer.innerHTML = ''; // Clear prior shop UI
         
         upgrades.forEach(upgrade => {
@@ -56,7 +53,6 @@ export class UIManager {
             `;
             
             btn.onclick = () => {
-                console.log("UI button clicked:", upgrade.name);
                 onPurchaseCallback(upgrade)
             };
             
