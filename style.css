@@ -79,6 +79,7 @@ html {
 
 #shop-container.purchaseContainer {
   display: grid;
+  margin-left: 10px;
   grid-template-columns: 175px 175px;
   gap: 10px;
   top: 60px;
