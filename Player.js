@@ -8,7 +8,7 @@ export class Player {
     }
 
     get passiveFood() {
-        return this.resources['citizens'] * 0.1;
+        return this.workers['citizens'] * 0.1;
     }
 
     // Determines resource types and calls related add function
@@ -122,6 +122,5 @@ export class Player {
         this.passiveIncome = 0;
         this.passiveWood = 0;
         this.passiveStone = 0;
-        this.passiveFood;
     }
 }
