@@ -28,7 +28,7 @@ class Game {
     init() {
         // Set up the big button click event
         this.ui.clickButton.addEventListener('click', () => {
-            this.player.addCurrency("money", this.player.clickPower);
+            this.player.addResource("money", this.player.clickPower);
             this.player.totalClicks++;
             this.ui.updateDisplay(this.player);
         });
@@ -90,9 +90,9 @@ class Game {
     updateLoop() {
         // Passive income divided across 30 ticks per second
         const ticksPerSecond = 30;
-        this.player.addCurrency("money", (this.player.passiveIncome / ticksPerSecond));
-        this.player.addCurrency("wood", (this.player.passiveWood / ticksPerSecond));
-        this.player.addCurrency("stone", (this.player.passiveStone / ticksPerSecond));
+        this.player.addResource("money", (this.player.passiveIncome / ticksPerSecond));
+        this.player.addResource("wood", (this.player.passiveWood / ticksPerSecond));
+        this.player.addResource("stone", (this.player.passiveStone / ticksPerSecond));
         this.ui.updateDisplay(this.player);
     }
 
