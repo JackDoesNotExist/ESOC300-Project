@@ -1,5 +1,5 @@
 export class Upgrade {
-    constructor(id, name, baseCost, costMult, incomeGenerated, type = 'passive', currency) {
+    constructor(id, name, baseCost, costMult, incomeGenerated, type = 'passive', resource) {
         this.id = id;
         this.name = name;
         this.baseCost = baseCost;
