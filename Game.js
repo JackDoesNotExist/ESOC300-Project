@@ -42,7 +42,6 @@ class Game {
         SaveSystem.load(this.player, this.upgrades, this.citizens, this.buildings);
         
         this.ui.renderUpgradeShop(this.upgrades, (upgrade) => this.handleUpgradePurchase(upgrade));
-        console.log("Upgrade shop rendered");
 
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
 
@@ -93,6 +92,7 @@ class Game {
         this.player.addResource("money", (this.player.passiveIncome / ticksPerSecond));
         this.player.addResource("wood", (this.player.passiveWood / ticksPerSecond));
         this.player.addResource("stone", (this.player.passiveStone / ticksPerSecond));
+        this.player.addResource("food", (this.player.passiveFood / ticksPerSecond));
         this.ui.updateDisplay(this.player);
     }
 
