@@ -9,11 +9,6 @@ class Game {
     constructor() {
         this.player = new Player();
         this.ui = new UIManager();
-        this.upgrades = [
-            new Upgrade('taxes', 'Taxes', 15, 1.15, 0.1, 'passive', 'money'),
-            new Upgrade('better-hammers', 'Better Hammers', 50, 1.3, 1, 'click', 'money'),
-            new Upgrade('quality-rifles', 'Quality Rifles', 75, 1.3, 0.3, 'passive', 'food')
-        ];
         this.citizens = [
             new Citizen('Woodcutter', 'money', 20, 1.15, 0.2),
             new Citizen('Miner', 'money', 40, 1.15, 0.2),
@@ -23,6 +18,11 @@ class Game {
             new Building('Logging Camp', 50, null, 1.15, 'wood', null, 'woodcutterCap'),
             new Building('Mining Camp', 100, 50, 1.15, 'wood', 'stone', 'minerCap'),
             new Building('Hunting Lodge', 150, null, 1.15, 'wood', null, 'hunterCap')
+        ];
+        this.upgrades = [
+            new Upgrade('taxes', 'Taxes', 15, 1.15, 0.1, 'passive', 'money'),
+            new Upgrade('better-hammers', 'Better Hammers', 50, 1.3, 1, 'click', 'money'),
+            new Upgrade('quality-rifles', 'Quality Rifles', 75, 1.3, 0.3, 'passive', 'food', this.citizens[2])
         ];
         
         this.init();
