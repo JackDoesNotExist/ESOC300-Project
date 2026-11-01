@@ -11,7 +11,6 @@ class Game {
         this.ui = new UIManager();
         this.upgrades = [
             new Upgrade('cursor', 'Auto-Clicker', 15, 1.15, 0.1, 'passive'),
-            new Upgrade('grandma', 'Grandma', 100, 1.15, 1, 'passive'),
             new Upgrade('sharp_clicks', 'Sharper Clicks', 50, 1.3, 1, 'click')
         ];
         this.citizens = [
@@ -40,9 +39,9 @@ class Game {
         });
 
         // Try loading a save file
-        SaveSystem.load(this.player, this.upgrades, this.citizens);
+        SaveSystem.load(this.player, this.upgrades, this.citizens, this.buildings);
         
-        this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
+        this.ui.renderUpgradeShop(this.upgrades, (upgrade) => this.handleUpgradePurchase(upgrade));
 
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
 
@@ -57,7 +56,7 @@ class Game {
 
     handleUpgradePurchase(upgrade) {
         if (upgrade.purchase(this.player)) {
-            this.ui.renderShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
+            this.ui.renderUpgradeShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
             this.ui.updateDisplay(this.player);
         } else {
             this.failPurchase();
@@ -93,7 +92,7 @@ class Game {
 
     resetSave() {
         SaveSystem.clearSave(this.player, this.upgrades, this.citizens, this.buildings);
-        this.ui.renderShop(this.upgrades, (upgrade) => this.handlePurchase(upgrade));
+        this.ui.renderUpgradeShop(this.upgrades, (upgrade) => this.handleUpgradePurchase(upgrade));
         this.ui.renderBuildingShop(this.buildings, (building) => this.handleCitizenPurchase(building));
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
     }
