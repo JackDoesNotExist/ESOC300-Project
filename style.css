@@ -47,6 +47,16 @@ html {
   scale: 1.1;
 }
 
+.buildingContainer {
+  border: 6px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.upgradeContainer {
+  border: 6px solid var(--primary-color);
+  border-radius: 8px;
+}
+
 #citizen-container.purchaseContainer {
   display: flex;
   column-gap: 10px;
