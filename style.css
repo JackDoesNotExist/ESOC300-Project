@@ -66,6 +66,7 @@ html {
 
 #building-container.purchaseContainer {
   display: grid;
+  margin-left: 10px;
   gap: 10px;
   bottom: 80px;
   grid-template-columns: 175px 175px;
