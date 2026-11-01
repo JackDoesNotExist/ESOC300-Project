@@ -4,58 +4,58 @@ export class Player {
     }
 
     // Determines currency types and calls related add function
-    addCurrency(currency, amount) {
-        if (currency === "money") {
+    addCurrency(resource, amount) {
+        if (resource === "money") {
             return this.addMoney(amount);
-        } else if (currency === "wood") {
+        } else if (resource === "wood") {
             return this.addWood(amount);
-        } else if (currency === "stone") {
+        } else if (resource === "stone") {
             return this.addStone(amount);
         }
     }
 
     addMoney(amount) {
-        this.money += amount;
+        this.resources.money += amount;
     }
     
     addWood(amount) {
-        this.wood += amount;
+        this.resources.wood += amount;
     }
     
     addStone(amount) {
-        this.stone += amount;
+        this.resources.stone += amount;
     }
 
     // Determines currency types and calls related spend function
-    spendCurrency(currency, amount) {
-        if (currency === "money") {
+    spendCurrency(resource, amount) {
+        if (resource === "money") {
             return this.spendMoney(amount);
-        } else if (currency === "wood") {
+        } else if (resource === "wood") {
             return this.spendWood(amount);
-        } else if (currency === "stone") {
+        } else if (resource === "stone") {
             return this.spendStone(amount);
         }
     }
 
     spendMoney(amount) {
-        if (this.money >= amount) {
-            this.money -= amount;
+        if (this.resource.money >= amount) {
+            this.resource.money -= amount;
             return true;
         }
         return false;
     }
 
     spendWood(amount) {
-        if (this.wood >= amount) {
-            this.wood -= amount;
+        if (this.resource.wood >= amount) {
+            this.resource.wood -= amount;
             return true;
         }
         return false;
     }
 
     spendStone(amount) {
-        if (this.stone >= amount) {
-            this.stone -= amount;
+        if (this.resource.stone >= amount) {
+            this.resource.stone -= amount;
             return true;
         }
         return false;
@@ -86,9 +86,6 @@ export class Player {
     
     reset() {
         this.resources = {money: 0, wood: 0, stone: 0, food: 0};
-        this.money = 0;
-        this.wood = 0;
-        this.stone = 0;
         
         this.citizens = 0;
         this.woodcutters = 0;
