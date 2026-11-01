@@ -67,7 +67,7 @@ class Game {
 
         console.log("Purchase successful:", success);
         console.log("Upgrade level:", upgrade.level);
-        console.log("Money remaining:", this.player.money);s
+        console.log("Money remaining:", this.player.money);
         
         if (success) {
             this.ui.renderUpgradeShop(
