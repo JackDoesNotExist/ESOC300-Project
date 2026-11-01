@@ -7,8 +7,8 @@ export class Player {
         return this.woodcutterCap + this.minerCap + this.hunterCap;
     }
 
-    get passiveFood() {
-        return this.workers['citizens'] * 0.1;
+    get totalPassiveFood() {
+        return this.passiveFood + (this.workers['citizens'] * 0.1);
     }
 
     // Determines resource types and calls related add function
@@ -104,6 +104,8 @@ export class Player {
             this.passiveStone += incomeGenerated;
         } else if (job === "Hunter") {
             this.workers['hunters'] += 1;
+            this.passiveFood += 1;
+            
         }
         this.workers['citizens'] += 1;
     }
@@ -122,5 +124,6 @@ export class Player {
         this.passiveIncome = 0;
         this.passiveWood = 0;
         this.passiveStone = 0;
+        this.passiveFood = 0;
     }
 }
