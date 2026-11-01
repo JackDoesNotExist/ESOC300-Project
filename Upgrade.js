@@ -6,7 +6,7 @@ export class Upgrade {
         this.costMult = costMult; // e.g., 1.15
         this.incomeGenerated = incomeGenerated; // Gained per level
         this.type = type; // 'click' or 'passive'
-        this.currency = currency;
+        this.resource = resource;
         this.level = 0;
     }
 
@@ -17,7 +17,7 @@ export class Upgrade {
     purchase(player) {
         const cost = this.currentCost;
         
-        if (player.spendCurrency(this.currency, cost)) {
+        if (player.spendResource(this.resource, cost)) {
             this.level++;
             if (this.type === 'click') {
                 player.clickPower += this.incomeGenerated;
