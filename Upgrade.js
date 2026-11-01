@@ -17,7 +17,7 @@ export class Upgrade {
     purchase(player) {
         const cost = this.currentCost;
         
-        if (player.spendCurrency(currency, cost)) {
+        if (player.spendCurrency(this.currency, cost)) {
             this.level++;
             if (this.type === 'click') {
                 player.clickPower += this.incomeGenerated;
