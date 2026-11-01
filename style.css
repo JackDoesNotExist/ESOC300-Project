@@ -17,9 +17,8 @@ html {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 40vh;
   margin-right: 70px;
-  transform: translateY(-100px);
+  transform: translateY(-250px);
   pointer-events: none;
 }
 
