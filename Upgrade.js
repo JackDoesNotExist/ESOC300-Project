@@ -17,12 +17,20 @@ export class Upgrade {
     purchase(player) {
         const cost = this.currentCost;
         
-        if (player.spendResource(this.resource, cost)) {
+        if (player.spendResource(player.resources['money'], cost)) {
             this.level++;
             if (this.type === 'click') {
                 player.clickPower += this.incomeGenerated;
             } else {
-                player.passiveIncome += this.incomeGenerated;
+                if (this.resource === 'money') {
+                    player.passiveIncome += this.incomeGenerated;
+                } else if (this.resource === 'wood') {
+                    player.passiveWood += this.incomeGenerated;
+                } else if (this.resource === 'stone') {
+                    player.passiveStone += this.incomeGenerated;
+                } else if (this.resource === 'food') {
+                    player.passiveFood += this.incomeGenerated;
+                }
             }
             return true;
         }
