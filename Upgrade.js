@@ -30,7 +30,7 @@ export class Upgrade {
                 } else if (this.resource === 'stone') {
                     player.passiveStone += this.incomeGenerated;
                 } else if (this.resource === 'food') {
-                    this.worker.baseIncome *= 2;
+                    this.worker.baseIncome *= this.incomeGenerated;
                 }
             }
             return true;
