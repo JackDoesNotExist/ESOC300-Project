@@ -3,8 +3,8 @@ export class Player {
         this.reset();
     }
 
-    // Determines currency types and calls related add function
-    addCurrency(resource, amount) {
+    // Determines resource types and calls related add function
+    addResource(resource, amount) {
         if (resource === "money") {
             return this.addMoney(amount);
         } else if (resource === "wood") {
@@ -26,8 +26,8 @@ export class Player {
         this.resources.stone += amount;
     }
 
-    // Determines currency types and calls related spend function
-    spendCurrency(resource, amount) {
+    // Determines resource types and calls related spend function
+    spendResource(resource, amount) {
         if (resource === "money") {
             return this.spendMoney(amount);
         } else if (resource === "wood") {
