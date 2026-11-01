@@ -80,15 +80,25 @@ export class UIManager {
     renderBuildingShop(buildings, onPurchaseCallback) {
         this.buildingContainer.innerHTML = '';
 
-        buildings.forEach(citizen => {
+        buildings.forEach(building => {
             const btn = document.createElement('button');
 
             btn.className = 'shop-btn';
-            btn.innerHTML = `
-                ${building.name} (Owned: ${building.count})
-                <br>
-                Cost: ${building.currentCost1}
-            `;
+
+            if (building.currency2 === null) {
+                btn.innerHTML = `
+                    ${building.name} (Owned: ${building.count})
+                    <br>
+                    Cost: ${building.currentCost1}
+                `;
+            } else {
+                btn.innerHTML = `
+                    ${building.name} (Owned: ${building.count})
+                    <br>
+                    Cost: ${building.currentCost1}
+                    Cost: ${building.currentCost2}
+                `;
+            }
 
             btn.onclick = () => onPurchaseCallback(building);
 
