@@ -7,8 +7,6 @@ import { Building } from './Building.js';
 
 class Game {
     constructor() {
-        console.log("Game constructor started");
-        
         this.player = new Player();
         this.ui = new UIManager();
         this.upgrades = [
@@ -28,7 +26,6 @@ class Game {
     }
 
     init() {
-        console.log("Game initialization started");
         // Set up the big button click event
         this.ui.clickButton.addEventListener('click', () => {
             this.player.addCurrency("money", this.player.clickPower);
@@ -59,15 +56,7 @@ class Game {
     }
 
     handleUpgradePurchase(upgrade) {
-        console.log("Upgrade button clicked:", upgrade.name);
-        console.log("Current money:", this.player.money);
-        console.log("Upgrade cost:", upgrade.currentCost);
-
         const success = upgrade.purchase(this.player);
-
-        console.log("Purchase successful:", success);
-        console.log("Upgrade level:", upgrade.level);
-        console.log("Money remaining:", this.player.money);
         
         if (success) {
             this.ui.renderUpgradeShop(
