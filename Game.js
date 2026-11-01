@@ -13,7 +13,7 @@ class Game {
         this.ui = new UIManager();
         this.upgrades = [
             new Upgrade('cursor', 'Auto-Clicker', 15, 1.15, 0.1, 'passive', 'money'),
-            new Upgrade('sharp_clicks', 'Sharper Clicks', 50, 1.3, 1, 'click', 'money')
+            new Upgrade('better-hammers', 'Better Hammers', 50, 1.3, 1, 'click', 'money')
         ];
         this.citizens = [
             new Citizen('Woodcutter', 'money', 20, 1.15),
