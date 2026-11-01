@@ -66,7 +66,7 @@ html {
   display: grid;
   grid-template-columns: 175px 175px;
   gap: 10px;
-  top: 40px;
+  top: 60px;
 }
 
 .purchaseContainer {
