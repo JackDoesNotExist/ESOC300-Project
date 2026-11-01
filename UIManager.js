@@ -40,10 +40,12 @@ export class UIManager {
         this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
         this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
         this.minerCapText.innerText = Math.floor(player.minerCap).toLocaleString();
+        this.foodCapText.innerText = Math.floor(player.hunterCap).toLocaleString();
 
         this.moneyCPS.innerText = player.passiveIncome.toFixed(1);
         this.woodCPS.innerText = player.passiveWood.toFixed(1);
         this.stoneCPS.innerText = player.passiveStone.toFixed(1);
+        this.foodCPS.innerText = player.passiveFood.toFixed(1);
     }
 
     renderUpgradeShop(upgrades, onPurchaseCallback) {
