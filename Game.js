@@ -94,7 +94,7 @@ class Game {
         this.player.addResource("money", (this.player.passiveIncome / ticksPerSecond));
         this.player.addResource("wood", (this.player.passiveWood / ticksPerSecond));
         this.player.addResource("stone", (this.player.passiveStone / ticksPerSecond));
-        this.player.addResource("food", (this.player.passiveFood / ticksPerSecond));
+        this.player.addResource("food", (this.player.totalPassiveFood / ticksPerSecond));
         this.ui.updateDisplay(this.player);
     }
 
