@@ -1,11 +1,11 @@
 export class Building {
-    constructor(name, baseCost1, baseCost2, costMult, currency1, currency2, type) {
+    constructor(name, baseCost1, baseCost2, costMult, resource1, resource2, type) {
         this.name = name;
         this.baseCost1 = baseCost1;
         this.baseCost2 = baseCost2;
         this.costMult = costMult;
-        this.currency1 = currency1;
-        this.currency2 = currency2;
+        this.resource1 = resource1;
+        this.resource2 = resource2;
         this.type = type;
         this.count = 0;
     }
@@ -27,19 +27,19 @@ export class Building {
         const cost2 = this.currentCost2;
     
         // Check affordability
-        if (player[this.currency1] < cost1) {
+        if (player[this.resource1] < cost1) {
           return false;
         }
     
-        if (this.currency2 !== null && player[this.currency2] < cost2) {
+        if (this.resource2 !== null && player[this.resource2] < cost2) {
           return false;
         }
     
         // Spend currencies
-        player.spendCurrency(this.currency1, cost1);
+        player.spendResource(this.resource1, cost1);
     
-        if (this.currency2 !== null) {
-          player.spendCurrency(this.currency2, cost2);
+        if (this.resource2 !== null) {
+          player.spendResource(this.resource2, cost2);
         }
     
         if (this.type === 'woodcutterCap') {
