@@ -87,19 +87,19 @@ export class UIManager {
 
             btn.className = 'shop-btn';
 
-            if (building.currency2 === null) {
+            if (building.resource2 === null) {
                 btn.innerHTML = `
                     ${building.name} (Owned: ${building.count})
                     <br>
-                    Cost: ${building.currentCost1} ${building.currency1}
+                    Cost: ${building.currentCost1} ${building.resource1}
                 `;
             } else {
                 btn.innerHTML = `
                     ${building.name} (Owned: ${building.count})
                     <br>
-                    Cost: ${building.currentCost1} ${building.currency1}
+                    Cost: ${building.currentCost1} ${building.resource1}
                     <br>
-                    Cost: ${building.currentCost2} ${building.currency2}
+                    Cost: ${building.currentCost2} ${building.resource2}
                 `;
             }
 
