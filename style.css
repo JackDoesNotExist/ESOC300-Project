@@ -50,6 +50,7 @@ html {
 #shopContainer {
   display: grid;
   grid-template-columns: 380px;
+  gap: 20px;
 }
 
 #buildingContainer {
