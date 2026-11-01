@@ -20,6 +20,7 @@ html {
   min-height: 40vh;
   margin-right: 70px;
   transform: translateY(-100px);
+  pointer-events: none;
 }
 
 .mainButton {
@@ -32,6 +33,7 @@ html {
   align-items: center;
   cursor: pointer;
   overflow: hidden;
+  pointer-events: auto;
 }
 
 .mainButton:active {
