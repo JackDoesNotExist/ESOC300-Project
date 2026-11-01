@@ -1,14 +1,15 @@
 export class SaveSystem {
-    static save(player, upgrades, citizens) {
+    static save(player, upgrades, citizens, buildings) {
         const saveData = {
             player: player,
             upgrades: upgrades.map(u => ({ id: u.id, level: u.level })),
-            citizens: citizens.map(c => ({ job: c.job, count: c.count}))
+            citizens: citizens.map(c => ({ job: c.job, count: c.count})),
+            buildings: buildings.map(b => ({ name: b.name, count: b.count}))
         };
         localStorage.setItem('myClickerSave', JSON.stringify(saveData));
     }
 
-    static load(player, upgrades, citizens) {
+    static load(player, upgrades, citizens, buildings) {
         const data = localStorage.getItem('myClickerSave');
         if (!data) return false;
         
@@ -24,10 +25,16 @@ export class SaveSystem {
             const actualCitizen = citizens.find(c => c.job === savedCitizen.job);
             if (actualCitizen) actualCitizen.count = savedCitizen.count;
         });
+
+        (parsed.buildings || []).forEach(savedBuilding => {
+            const actualBuilding = buildings.find(b => b.job === savedBuilding.job);
+            if (actualBuilding) actualBuilding.count = actualBuilding.count;
+        });
+        
         return true;
     }
 
-    static clearSave(player, upgrades, citizens) {
+    static clearSave(player, upgrades, citizens, buildings) {
         localStorage.removeItem('myClickerSave');
 
         player.reset();
@@ -39,6 +46,10 @@ export class SaveSystem {
         citizens.forEach(citizen => {
             citizen.count = 0;
             citizen.level = 1;
+        });
+
+        buildings.forEach(building => {
+            buildings.count = 0;
         });
 
         return true;
