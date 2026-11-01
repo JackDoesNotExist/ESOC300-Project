@@ -49,8 +49,8 @@ html {
 
 #shopContainer {
   display: grid;
-  grid-template-columns: 380px;
-  gap: 20px;
+  grid-template-columns: 380px 380px;
+  gap: 40px;
 }
 
 #buildingContainer {
