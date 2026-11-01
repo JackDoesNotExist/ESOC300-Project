@@ -47,6 +47,11 @@ html {
   scale: 1.1;
 }
 
+#shopContainer {
+  display: grid;
+  grid-template-columns: 380px;
+}
+
 #buildingContainer {
   height: 190px;
   width: 380px;
@@ -56,6 +61,8 @@ html {
 }
 
 #upgradeContainer {
+  height: 190px;
+  width: 380px;
   border: 6px solid var(--primary-color);
   border-radius: 8px;
   background: #86592d;
