@@ -48,14 +48,17 @@ html {
 }
 
 .buildingContainer {
-  margin-right: 505px;
+  height: 190px;
+  width: 380px;
   border: 6px solid var(--primary-color);
   border-radius: 8px;
+  background: #86592d;
 }
 
 .upgradeContainer {
   border: 6px solid var(--primary-color);
   border-radius: 8px;
+  background: #86592d;
 }
 
 #citizen-container.purchaseContainer {
