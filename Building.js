@@ -27,11 +27,11 @@ export class Building {
         const cost2 = this.currentCost2;
     
         // Check affordability
-        if (player[this.resource1] < cost1) {
+        if (player.resources[this.resource1] < cost1) {
           return false;
         }
     
-        if (this.resource2 !== null && player[this.resource2] < cost2) {
+        if (this.resource2 !== null && player.resources[this.resource2] < cost2) {
           return false;
         }
     
@@ -46,6 +46,8 @@ export class Building {
           player.woodcutterCap += 5;
         } else if (this.type === 'minerCap') {
           player.minerCap += 5;
+        } else if (this.type === 'hunterCap') {
+          player.hunterCap += 5;
         }
     
         this.count++;
