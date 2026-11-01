@@ -59,7 +59,10 @@ html {
 }
 
 #shop-container.purchaseContainer {
-  bottom: 20px;
+  display: grid;
+  grid-template-columns: 175px 175px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 .purchaseContainer {
