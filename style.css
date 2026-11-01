@@ -59,13 +59,14 @@ html {
   gap: 10px;
   bottom: 10px;
   grid-template-columns: 175px 175px;
+  grid-template-rows: 60px 60px;
 }
 
 #shop-container.purchaseContainer {
   display: grid;
   grid-template-columns: 175px 175px;
   gap: 10px;
-  top: 10px;
+  top: 40px;
 }
 
 .purchaseContainer {
