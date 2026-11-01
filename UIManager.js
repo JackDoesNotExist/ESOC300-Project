@@ -22,9 +22,9 @@ export class UIManager {
     }
 
     updateDisplay(player) {
-        this.moneyText.innerText = Math.floor(player.resource["money"]).toLocaleString();
-        this.woodText.innerText = Math.floor(player.resource["wood"]).toLocaleString();
-        this.stoneText.innerText = Math.floor(player.resource["stone"]).toLocaleString();
+        this.moneyText.innerText = Math.floor(player.resources["money"]).toLocaleString();
+        this.woodText.innerText = Math.floor(player.resources["wood"]).toLocaleString();
+        this.stoneText.innerText = Math.floor(player.resources["stone"]).toLocaleString();
         
         this.citizenText.innerText = Math.floor(player.citizens).toLocaleString();
         this.woodcutterText.innerText = Math.floor(player.woodcutters).toLocaleString();
