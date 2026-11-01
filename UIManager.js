@@ -39,7 +39,7 @@ export class UIManager {
         this.stoneCPS.innerText = player.passiveStone.toFixed(1);
     }
 
-    renderShop(upgrades, onPurchaseCallback) {
+    renderUpgradeShop(upgrades, onPurchaseCallback) {
         this.shopContainer.innerHTML = ''; // Clear prior shop UI
         
         upgrades.forEach(upgrade => {
@@ -68,7 +68,7 @@ export class UIManager {
             btn.innerHTML = `
                 ${citizen.job} (Owned: ${citizen.count})
                 <br>
-                Cost: ${citizen.currentCost}
+                Cost: ${citizen.currentCost} 
             `;
 
             btn.onclick = () => onPurchaseCallback(citizen);
@@ -89,14 +89,14 @@ export class UIManager {
                 btn.innerHTML = `
                     ${building.name} (Owned: ${building.count})
                     <br>
-                    Cost: ${building.currentCost1}
+                    Cost: ${building.currentCost1} ' ' ${building.currency1}
                 `;
             } else {
                 btn.innerHTML = `
                     ${building.name} (Owned: ${building.count})
                     <br>
-                    Cost: ${building.currentCost1}
-                    Cost: ${building.currentCost2}
+                    Cost: ${building.currentCost1} ' ' ${building.currency1}
+                    Cost: ${building.currentCost2} ' ' ${building.currency2}
                 `;
             }
 
