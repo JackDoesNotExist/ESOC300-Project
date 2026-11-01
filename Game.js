@@ -52,12 +52,12 @@ class Game {
         setInterval(() => this.updateLoop(), 1000 / 30);
         
         // Auto-save every 10 seconds
-        setInterval(() => SaveSystem.save(this.player, this.upgrades, this.citizens), 10000);
+        setInterval(() => SaveSystem.save(this.player, this.upgrades, this.citizens, this.buildings), 10000);
     }
 
-    handlePurchase(upgrade) {
+    handleUpgradePurchase(upgrade) {
         if (upgrade.purchase(this.player)) {
-            this.ui.renderShop(this.upgrades, (u) => this.handlePurchase(u));
+            this.ui.renderShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
             this.ui.updateDisplay(this.player);
         } else {
             this.failPurchase();
