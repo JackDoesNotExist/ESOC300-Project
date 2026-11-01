@@ -38,24 +38,24 @@ export class Player {
     }
 
     spendMoney(amount) {
-        if (this.resource.money >= amount) {
-            this.resource.money -= amount;
+        if (this.resources.money >= amount) {
+            this.resources.money -= amount;
             return true;
         }
         return false;
     }
 
     spendWood(amount) {
-        if (this.resource.wood >= amount) {
-            this.resource.wood -= amount;
+        if (this.resources.wood >= amount) {
+            this.resources.wood -= amount;
             return true;
         }
         return false;
     }
 
     spendStone(amount) {
-        if (this.resource.stone >= amount) {
-            this.resource.stone -= amount;
+        if (this.resources.stone >= amount) {
+            this.resources.stone -= amount;
             return true;
         }
         return false;
