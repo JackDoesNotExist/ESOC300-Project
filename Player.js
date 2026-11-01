@@ -8,7 +8,7 @@ export class Player {
     }
 
     get totalPassiveFood() {
-        return this.passiveFood + (this.workers['citizens'] * 0.1);
+        return this.passiveFood + (this.workers['citizens'] * -0.1);
     }
 
     // Determines resource types and calls related add function
