@@ -48,7 +48,7 @@ html {
 #building-container.purchaseContainer {
   display: flex;
   column-gap: 10px;
-  bottom: 50px;
+  bottom: 40px;
 }
 
 #citizen-container.purchaseContainer {
