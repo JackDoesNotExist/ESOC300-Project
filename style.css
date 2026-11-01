@@ -48,9 +48,10 @@ html {
 }
 
 #building-container.purchaseContainer {
-  display: flex;
-  column-gap: 10px;
+  display: grid;
+  gap: 10px;
   bottom: 40px;
+  grid-template-columns: 175px 175px;
 }
 
 #citizen-container.purchaseContainer {
@@ -63,8 +64,7 @@ html {
 #shop-container.purchaseContainer {
   display: grid;
   grid-template-columns: 175px 175px;
-  column-gap: 10px;
-  row-gap: 10px;
+  gap: 10px;
 }
 
 .purchaseContainer {
