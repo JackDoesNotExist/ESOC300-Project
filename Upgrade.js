@@ -18,10 +18,12 @@ export class Upgrade {
         const cost = this.currentCost;
         
         if (player.spendResource(player.resources['money'], cost)) {
+            console.log('Purchase successful!');
             this.level++;
             if (this.type === 'click') {
                 player.clickPower += this.incomeGenerated;
             } else {
+                console.log(this.type);
                 if (this.resource === 'money') {
                     player.passiveIncome += this.incomeGenerated;
                 } else if (this.resource === 'wood') {
