@@ -104,7 +104,7 @@ export class Player {
             this.passiveStone += incomeGenerated;
         } else if (job === "Hunter") {
             this.workers['hunters'] += 1;
-            this.passiveFood += 1;
+            this.passiveFood += incomeGenerated;
             
         }
         this.workers['citizens'] += 1;
