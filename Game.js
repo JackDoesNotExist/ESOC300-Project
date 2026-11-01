@@ -15,11 +15,13 @@ class Game {
         ];
         this.citizens = [
             new Citizen('Woodcutter', 'money', 20, 1.15),
-            new Citizen('Miner', 'money', 40, 1.15)
+            new Citizen('Miner', 'money', 40, 1.15),
+            new Citizen('Hunter', 'money', 60, 1.15)
         ];
         this.buildings = [
             new Building('Logging Camp', 50, null, 1.15, 'wood', null, 'woodcutterCap'),
-            new Building('Mining Camp', 100, 50, 1.15, 'wood', 'stone', 'minerCap')
+            new Building('Mining Camp', 100, 50, 1.15, 'wood', 'stone', 'minerCap'),
+            new Building('Hunting Lodge', 150, null, 1.15, 'wood', null, 'hunterCap')
         ];
         
         this.init();
