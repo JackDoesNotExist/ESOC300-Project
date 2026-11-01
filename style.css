@@ -47,7 +47,7 @@ html {
   scale: 1.1;
 }
 
-.buildingContainer {
+#buildingContainer {
   height: 190px;
   width: 380px;
   border: 6px solid var(--primary-color);
@@ -55,7 +55,7 @@ html {
   background: #86592d;
 }
 
-.upgradeContainer {
+#upgradeContainer {
   border: 6px solid var(--primary-color);
   border-radius: 8px;
   background: #86592d;
