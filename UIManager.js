@@ -45,7 +45,7 @@ export class UIManager {
         this.moneyCPS.innerText = player.passiveIncome.toFixed(1);
         this.woodCPS.innerText = player.passiveWood.toFixed(1);
         this.stoneCPS.innerText = player.passiveStone.toFixed(1);
-        this.foodCPS.innerText = player.passiveFood.toFixed(1);
+        this.foodCPS.innerText = player.totalPassiveFood.toFixed(1);
     }
 
     renderUpgradeShop(upgrades, onPurchaseCallback) {
