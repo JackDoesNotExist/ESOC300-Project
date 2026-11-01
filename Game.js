@@ -14,9 +14,9 @@ class Game {
             new Upgrade('better-hammers', 'Better Hammers', 50, 1.3, 1, 'click', 'money')
         ];
         this.citizens = [
-            new Citizen('Woodcutter', 'money', 20, 1.15),
-            new Citizen('Miner', 'money', 40, 1.15),
-            new Citizen('Hunter', 'money', 60, 1.15)
+            new Citizen('Woodcutter', 'money', 20, 1.15, 0.2),
+            new Citizen('Miner', 'money', 40, 1.15, 0.2),
+            new Citizen('Hunter', 'money', 60, 1.15, 0.3)
         ];
         this.buildings = [
             new Building('Logging Camp', 50, null, 1.15, 'wood', null, 'woodcutterCap'),
