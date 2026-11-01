@@ -47,13 +47,6 @@ html {
   scale: 1.1;
 }
 
-#building-container.purchaseContainer {
-  display: grid;
-  gap: 10px;
-  bottom: 40px;
-  grid-template-columns: 175px 175px;
-}
-
 #citizen-container.purchaseContainer {
   display: flex;
   column-gap: 10px;
@@ -61,10 +54,18 @@ html {
   left: 120px;
 }
 
+#building-container.purchaseContainer {
+  display: grid;
+  gap: 10px;
+  bottom: 30px;
+  grid-template-columns: 175px 175px;
+}
+
 #shop-container.purchaseContainer {
   display: grid;
   grid-template-columns: 175px 175px;
   gap: 10px;
+  top: 10px;
 }
 
 .purchaseContainer {
