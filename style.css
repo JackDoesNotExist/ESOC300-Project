@@ -4,6 +4,7 @@
 }
 
 html {
+  overflow: hidden;
   font-size: 100%;
   color: var(--primary-color);
   background-color: var(--main-bg);
@@ -61,7 +62,7 @@ html {
 #buildingContainer {
   height: 190px;
   width: 380px;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   border: 6px solid var(--primary-color);
   border-radius: 8px;
