@@ -41,7 +41,10 @@ export class UIManager {
         this.minerText.innerText = Math.floor(player.workers['miners']).toLocaleString();
         this.hunterText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
 
-        this.hunterQuestText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
+        if (this.hunterQuestText != null) {
+            this.hunterQuestText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
+        }
+        
         this.woodcutterQuestText.innerText = Math.floor(player.workers['woodcutters']).toLocaleString();
         this.loggingQuestText = Math.floor(buildings[0]).toLocaleString();
         
