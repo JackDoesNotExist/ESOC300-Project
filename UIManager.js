@@ -11,7 +11,6 @@ export class UIManager {
         this.hunterText = document.getElementById('hunter-display');
 
         this.quest1Text = document.getElementById('hunter-quest-display');
-        this.firstNextButton = document.getElementById('firstNextButton');
         
         this.citizenCapText = document.getElementById('citizen-cap-display');
         this.woodcutterCapText = document.getElementById('woodcutter-cap-display');
@@ -41,12 +40,6 @@ export class UIManager {
         this.hunterText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
 
         this.quest1Text.innerText = Math.floor(player.workers['hunters']).toLocaleString();
-
-        if (player.workers['hunters'] >= 5) {
-            this.firstNextButton.style.visibility = "visible";
-        } else {
-            this.firstNextButton.style.visibility = "hidden";
-        }
 
         this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
         this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
