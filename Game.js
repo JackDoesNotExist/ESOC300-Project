@@ -33,7 +33,7 @@ class Game {
         this.ui.clickButton.addEventListener('click', () => {
             this.player.addResource("money", this.player.clickPower);
             this.player.totalClicks++;
-            this.ui.updateDisplay(this.player);
+            this.ui.updateDisplay(this.player, this.buildings);
             
             const audio = new Audio('./hammer_hit.wav');
             audio.currentTime = 0; 
@@ -65,7 +65,7 @@ class Game {
         
         if (upgrade.purchase(this.player)) {
             this.ui.renderUpgradeShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
-            this.ui.updateDisplay(this.player);
+            this.ui.updateDisplay(this.player, this.buildings);
             this.succeedPurchase();
         } else {
             this.failPurchase();
@@ -75,7 +75,7 @@ class Game {
     handleCitizenPurchase(citizen) {
         if (citizen.purchase(this.player)) {
             this.ui.renderCitizenShop(this.citizens, (c) => this.handleCitizenPurchase(c));
-            this.ui.updateDisplay(this.player);
+            this.ui.updateDisplay(this.player, this.buildings);
             this.succeedPurchase();
         } else {
             this.failPurchase();
@@ -85,7 +85,7 @@ class Game {
     handleBuildingPurchase(building) {
         if (building.purchase(this.player)) {
             this.ui.renderBuildingShop(this.buildings, (b) => this.handleBuildingPurchase(b));
-            this.ui.updateDisplay(this.player);
+            this.ui.updateDisplay(this.player, this.buildings);
             this.succeedPurchase();
         } else {
             this.failPurchase();
@@ -99,7 +99,7 @@ class Game {
         this.player.addResource("wood", (this.player.passiveWood / ticksPerSecond));
         this.player.addResource("stone", (this.player.passiveStone / ticksPerSecond));
         this.player.addResource("food", (this.player.totalPassiveFood / ticksPerSecond));
-        this.ui.updateDisplay(this.player);
+        this.ui.updateDisplay(this.player, this.buildings);
     }
 
     resetSave() {
