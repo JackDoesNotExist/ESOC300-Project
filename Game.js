@@ -41,6 +41,10 @@ class Game {
             this.resetSave();
         });
 
+        document.getElementById().addEventListener('click', () => {
+
+        });
+
         // Try loading a save file
         SaveSystem.load(this.player, this.upgrades, this.citizens, this.buildings);
         
