@@ -62,6 +62,7 @@ class Game {
         if (upgrade.purchase(this.player)) {
             this.ui.renderUpgradeShop(this.upgrades, (u) => this.handleUpgradePurchase(u));
             this.ui.updateDisplay(this.player);
+            this.succeedPurchase();
         } else {
             this.failPurchase();
         }
@@ -71,6 +72,7 @@ class Game {
         if (citizen.purchase(this.player)) {
             this.ui.renderCitizenShop(this.citizens, (c) => this.handleCitizenPurchase(c));
             this.ui.updateDisplay(this.player);
+            this.succeedPurchase();
         } else {
             this.failPurchase();
         }
@@ -80,6 +82,7 @@ class Game {
         if (building.purchase(this.player)) {
             this.ui.renderBuildingShop(this.buildings, (b) => this.handleBuildingPurchase(b));
             this.ui.updateDisplay(this.player);
+            this.succeedPurchase();
         } else {
             this.failPurchase();
         }
@@ -100,6 +103,12 @@ class Game {
         this.ui.renderUpgradeShop(this.upgrades, (upgrade) => this.handleUpgradePurchase(upgrade));
         this.ui.renderBuildingShop(this.buildings, (building) => this.handleBuildingPurchase(building));
         this.ui.renderCitizenShop(this.citizens, (citizen) => this.handleCitizenPurchase(citizen));
+    }
+
+    succeedPurchase() {
+        const audio = new Audio('./cha_ching.mp3');
+        audio.currentTime = 0; 
+        audio.play();
     }
 
     failPurchase() {
