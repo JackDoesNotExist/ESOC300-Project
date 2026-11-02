@@ -2,7 +2,7 @@ export class SaveSystem {
     static save(player, upgrades, citizens, buildings) {
         const saveData = {
             player: player,
-            upgrades: upgrades.map(u => ({ id: u.id, level: u.level })),
+            upgrades: upgrades.map(u => ({ id: u.id, level: u.level})),
             citizens: citizens.map(c => ({ job: c.job, count: c.count})),
             buildings: buildings.map(b => ({ name: b.name, count: b.count}))
         };
