@@ -13,6 +13,10 @@ html {
   font-size: 2rem;
 }
 
+#questSec {
+  position: absolute;
+}
+
 .mainButtonSec {
   display: flex;
   justify-content: flex-end;
