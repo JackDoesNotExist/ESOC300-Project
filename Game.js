@@ -110,13 +110,13 @@ class Game {
     }
 
     succeedPurchase() {
-        const audio = new Audio('./cha_ching.mp3');
+        const audio = new Audio('./assets/cha_ching.mp3');
         audio.currentTime = 0; 
         audio.play();
     }
 
     failPurchase() {
-        const audio = new Audio('./error_01.wav');
+        const audio = new Audio('./assets/error_01.wav');
         audio.currentTime = 0; 
         audio.play();
     }
