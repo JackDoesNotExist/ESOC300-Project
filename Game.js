@@ -34,7 +34,10 @@ class Game {
             this.player.addResource("money", this.player.clickPower);
             this.player.totalClicks++;
             this.ui.updateDisplay(this.player);
+            
             const audio = new Audio('./hammer_hit.wav');
+            audio.currentTime = 0; 
+            audio.play();
         });
 
         // Set up the reset button
