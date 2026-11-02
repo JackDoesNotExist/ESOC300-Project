@@ -44,9 +44,11 @@ export class UIManager {
         if (this.hunterQuestText != null) {
             this.hunterQuestText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
         }
-        
-        this.woodcutterQuestText.innerText = Math.floor(player.workers['woodcutters']).toLocaleString();
-        this.loggingQuestText.innerText = Math.floor(buildings[0].count).toLocaleString();
+
+        if (this.woodcutterQuestText != null) {
+            this.woodcutterQuestText.innerText = Math.floor(player.workers['woodcutters']).toLocaleString();
+            this.loggingQuestText.innerText = Math.floor(buildings[0].count).toLocaleString();
+        }
         
         this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
         this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
