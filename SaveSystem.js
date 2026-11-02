@@ -28,7 +28,7 @@ export class SaveSystem {
 
         (parsed.buildings || []).forEach(savedBuilding => {
             const actualBuilding = buildings.find(b => b.name === savedBuilding.name);
-            if (actualBuilding) actualBuilding.count = actualBuilding.count;
+            if (actualBuilding) actualBuilding.count = savedBuilding.count;
         });
         
         return true;
@@ -49,7 +49,7 @@ export class SaveSystem {
         });
 
         buildings.forEach(building => {
-            buildings.count = 0;
+            building.count = 0;
         });
 
         return true;
