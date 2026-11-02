@@ -1,9 +1,9 @@
-import { Player } from './javascript/Player.js';
-import { Upgrade } from './javascript/Upgrade.js';
-import { UIManager } from './javascript/UIManager.js';
-import { SaveSystem } from './javascript/SaveSystem.js';
-import { Citizen } from './javascript/Citizen.js';
-import { Building } from './javascript/Building.js';
+import { Player } from './Player.js';
+import { Upgrade } from './Upgrade.js';
+import { UIManager } from './UIManager.js';
+import { SaveSystem } from './SaveSystem.js';
+import { Citizen } from './Citizen.js';
+import { Building } from './Building.js';
 
 class Game {
     constructor() {
