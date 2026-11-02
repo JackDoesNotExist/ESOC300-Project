@@ -10,7 +10,9 @@ export class UIManager {
         this.minerText = document.getElementById('miner-display');
         this.hunterText = document.getElementById('hunter-display');
 
-        this.quest1Text = document.getElementById('hunter-quest-display');
+        this.hunterQuestText = document.getElementById('hunter-quest-display');
+        this.woodcutterQuestText = document.getElementById('woodcutter-quest-display');
+        this.loggingQuestText = document.getElementById('logging-quest-display');
         
         this.citizenCapText = document.getElementById('citizen-cap-display');
         this.woodcutterCapText = document.getElementById('woodcutter-cap-display');
@@ -28,7 +30,7 @@ export class UIManager {
         this.buildingContainer = document.getElementById('building-container');
     }
 
-    updateDisplay(player) {
+    updateDisplay(player, buildings) {
         this.moneyText.innerText = Math.floor(player.resources['money']).toLocaleString();
         this.woodText.innerText = Math.floor(player.resources['wood']).toLocaleString();
         this.stoneText.innerText = Math.floor(player.resources['stone']).toLocaleString();
@@ -39,8 +41,10 @@ export class UIManager {
         this.minerText.innerText = Math.floor(player.workers['miners']).toLocaleString();
         this.hunterText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
 
-        this.quest1Text.innerText = Math.floor(player.workers['hunters']).toLocaleString();
-
+        this.hunterQuestText.innerText = Math.floor(player.workers['hunters']).toLocaleString();
+        this.woodcutterQuestText.innerText = Math.floor(player.workers['woodcutters']).toLocaleString();
+        this.loggingQuestText = Math.floor(buildings[]).toLocaleString();
+        
         this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
         this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
         this.minerCapText.innerText = Math.floor(player.minerCap).toLocaleString();
