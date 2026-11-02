@@ -46,7 +46,7 @@ export class UIManager {
         }
         
         this.woodcutterQuestText.innerText = Math.floor(player.workers['woodcutters']).toLocaleString();
-        this.loggingQuestText = Math.floor(buildings[0].count).toLocaleString();
+        this.loggingQuestText.innerText = Math.floor(buildings[0].count).toLocaleString();
         
         this.citizenCapText.innerText = Math.floor(player.citizenCap).toLocaleString();
         this.woodcutterCapText.innerText = Math.floor(player.woodcutterCap).toLocaleString();
