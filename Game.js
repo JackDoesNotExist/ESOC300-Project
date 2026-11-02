@@ -57,8 +57,8 @@ class Game {
         // Start 30 FPS core update loop for passive income
         setInterval(() => this.updateLoop(), 1000 / 30);
         
-        // Auto-save every 5 seconds
-        setInterval(() => SaveSystem.save(this.player, this.upgrades, this.citizens, this.buildings), 5000);
+        // Auto-save every 3 seconds
+        setInterval(() => SaveSystem.save(this.player, this.upgrades, this.citizens, this.buildings), 3000);
     }
 
     handleUpgradePurchase(upgrade) {
