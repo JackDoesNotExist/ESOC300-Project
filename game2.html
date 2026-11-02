@@ -58,25 +58,13 @@
     </div>
   
     <div class="pageButtonsSec">
-      <a href="./index.html">
+      <a href="./story2.html">
         <button class="pageButtons" id="backButton">Back</button>
       </a>
       <button class="pageButtons" id="resetButton">RESET</button>
+      <a href="./game2.html">
+        <button class="pageButtons" id="nextButton">Next</button>
+      </a>
     </div>
-
-    <script>
-      // 1. Create a reference to the button
-      const button = document.getElementById("main-button");
-  
-      // 2. Initialize the audio object with your file path
-      const audio = new Audio('./hammer_hit.wav');
-      
-      // 3. Add a click event listener to play the sound
-      button.addEventListener('click', () => {
-        // Reset the audio back to the beginning in case it's clicked rapidly
-        audio.currentTime = 0; 
-        audio.play();
-      });
-    </script>
   </body>
 </html>
