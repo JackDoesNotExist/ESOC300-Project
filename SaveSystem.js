@@ -27,7 +27,7 @@ export class SaveSystem {
         });
 
         (parsed.buildings || []).forEach(savedBuilding => {
-            const actualBuilding = buildings.find(b => b.job === savedBuilding.job);
+            const actualBuilding = buildings.find(b => b.name === savedBuilding.name);
             if (actualBuilding) actualBuilding.count = actualBuilding.count;
         });
         
