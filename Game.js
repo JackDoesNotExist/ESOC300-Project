@@ -35,7 +35,7 @@ class Game {
             this.player.totalClicks++;
             this.ui.updateDisplay(this.player, this.buildings);
             
-            const audio = new Audio('./hammer_hit.wav');
+            const audio = new Audio('./assets/hammer_hit.wav');
             audio.currentTime = 0; 
             audio.play();
         });
